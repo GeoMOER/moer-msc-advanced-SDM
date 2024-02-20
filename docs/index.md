@@ -35,7 +35,7 @@ At the end of this course you should
 * have explored the impact of selecting environmental predictors on SDM.
 * be able to identified gaps in current knowledge within a specific field of research.
 * be able to independently constructed your own SDMs.
-* engaged with various machine learning strategies including tuning, variable selection, training, testing, and validation techniques.
+* engage with various modeling strategies including tuning, variable selection, training, testing, and validation techniques.
 * have designed, executed, and analyzed your own scientific experiments.
 * have developed awareness regarding the capabilities and limitations of SDMs.
 
@@ -59,21 +59,21 @@ Weekday hh:mm - hh:mm.
 | Session |  Date | Topic                        | Content                                                                          |
 |---------|-------|------------------------------|----------------------------------------------------------------------------------|
 ||| **SDM Basics** ||
-| 01 | DD.MM.YYYY | Spatial data in R basics              | Course introduction, expectations, organisational matters, R, R Studio, R Markdown, GitHub     |
-| 02 | DD.MM.YYYY | SDM Basics                  | definitions and how it works                   |
-| 03 | DD.MM.YYYY | different sdm techniques      | maxent, spatialmaxent, glm... |
-| 04 | DD.MM.YYYY |     | Raster data, vector data, coordinate reference systems, reading and writing spatial data, spatial operators, mapping |
-| 05 | DD.MM.YYYY | SDM Basics                   | Why SDM?, applicability of SDM, ecological concepts, SDM modelling cycle. Student tutorial assignment                          |
-||| **Exemplary SDM workflow**          ||
-| 06 | DD.MM.YYYY | How to Frankenstein Your Own Species | Overview, conceptualisation, data processing which SDM packages and functions to choose?          |
-| 07 | DD.MM.YYYY | SDM workflow              | Model fitting, assessment, and predictions                                 |
-||| **High-risk high-gain play the game of science**           ||
-| 08 | DD.MM.YYYY | research gaps in SDM             |   You can use the time of this session to work on your student tutorials and ask questions                                      |
-| 09 | DD.MM.YYYY | create your own experiment        |                         |
-| 10  | DD.MM.YYYY |                 | Student tutorials presentations: Unbiased conditional inference forest (cforest), GLM mit Lasso penalty                                     |
-| 11  | DD.MM.YYYY | SDM methods II              | Student tutorials presentations: Boosted Regression Trees                       |
-| 12 | DD.MM.YYYY | SDM methods III               | Student tutorials presentations: XGboost, spatialMaxent                        |
-| 13 | DD.MM.YYYY| Final Team Project ||
+| 01 | DD.MM.YYYY | Basic tools for this course     | Course introduction, expectations, organisational matters, R, R Studio, R Markdown, GitHub     |
+| 02 | DD.MM.YYYY | SDM Basics                   | What is SDM, how does it works and why do we need it?                  |
+| 03 | DD.MM.YYYY | SDM methods     | Common methods, software and R packages used for SDM |
+| 04 | DD.MM.YYYY |   ??                           |  |
+| 05 | DD.MM.YYYY |   ??                |                           |
+||| **Virtual species**                   |        |
+| 06 | DD.MM.YYYY | How to Frankenstein Your Own Species | Generate virtual species with different ecological niches          |
+| 07 | DD.MM.YYYY | Exemplary SDM workflow                 | Model fitting, assessment, and predictions                                 |
+||| **From idea to insight: Your personal research project**           ||
+| 08 | DD.MM.YYYY | Research gaps in SDM         |                                         |
+| 09 | DD.MM.YYYY | Create your own experimental setup   | What do you want to research and why? How to set up an experimental design to test your hypothesis|
+| 10 | DD.MM.YYYY | Your SDM project             | You can use the time of this session to work on your project and ask questions    |
+| 11 | DD.MM.YYYY | Your SDM project II          | You can use the time of this session to work on your project and ask questions    |
+| 12 | DD.MM.YYYY | **Present your project outline**  |                         |
+| 13 | DD.MM.YYYY | Your SDM project III          |  You can use the time of this session to work on your project and ask questions   |
 ||| **Synthesis**                                ||
 | 14 | DD.MM.YYYY | Wrap up                      | Get and give feedback from your peers and instructors, tell us how you self-assess your skills, and happy holidays |
 
@@ -83,7 +83,7 @@ Weekday hh:mm - hh:mm.
 
 # Deliverables
 
-The course grading will be based on on your final team project.
+The course grading will be based on on your final SDM project.
 
 
 
