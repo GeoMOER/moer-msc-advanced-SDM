@@ -1,4 +1,4 @@
-# moer-msc-advanced-SDM
+# Advanced Species Distribution Modeling
 
 Species distribution modelling (SDM) is a key competence for ecogeographical research and applied nature conservation. It allows researchers to estimate current distributions of species and to also predict their future distributions under climate change scenarios. However, SDM is a dynamic field characterized by rapid advancements and many uncertainties.
 
