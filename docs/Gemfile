@@ -38,12 +38,29 @@ end
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1.0" if Gem.win_platform?
+#gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
 
 
-gem "webrick", "~> 1.8"
+#gem "webrick", "~> 1.8"
+gem "webrick"
 
-gem "rack", "~> 3.0"
+#gem "rack", "~> 3.0"
+gem "rack"
 
-gem "rackup", "~> 2.1"
+#gem "rackup", "~> 2.1"
+gem "rackup"
+
+gem "faraday-retry"
+
+gem "mutex_m"
+
+gem "fiddle"
+
+gem "ostruct"
+
+#gem "sinatra", "~> 3.2.0"
+
+#gem "rack"
+
+gem "sinatra", ">= 3", "< 4"
