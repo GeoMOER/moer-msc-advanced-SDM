@@ -1,11 +1,11 @@
 ---
 title: "Overview"
 header:
-  image: '/assets/images/teaserimages/world_temp.png'
-  caption: '[Environmental Informatics Marburg](https://www.uni-marburg.de/en/fb19/disciplines/physisch/environmentalinformatics){:target="_blank"}'
+  image: '/assets/images/teaserimages/ai.png'
+  caption: '[Marco Verch via ccnull.de](https://ccnull.de/foto/kuenstliche-intelligenz-bei-der-arbeit/1095606). [CC-BY 2.0](https://creativecommons.org/licenses/by/2.0/de/). Image cropped.'
 ---
 
-Get a brute-force introduction to working with different kinds of spatial data in R.
+xx
 
 <!--more-->
 

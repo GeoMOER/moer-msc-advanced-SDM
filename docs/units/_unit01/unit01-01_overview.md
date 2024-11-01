@@ -1,8 +1,8 @@
 ---
 title: Overview
 header:
-  image: '/assets/images/teaserimages/bats.png'
-  caption: '[Environmental Informatics Marburg](https://www.uni-marburg.de/en/fb19/disciplines/physisch/environmentalinformatics){:target="_blank"}'
+  image: '/assets/images/teaserimages/felder.png'
+  caption: '[Marco Verch via ccnull.de](https://ccnull.de/foto/drohnenaufnahme-von-landwirtschaftlichen-feldern-mit-geometrischen-mustern/1105470). [CC-BY 2.0](https://creativecommons.org/licenses/by/2.0/de/). Image cropped.'
 ---
 
 Go through a brute force introduction into R, R Markdown, the RStudio IDE, version management with Git and GitHub's classroom functionality to get ready for solving the upcoming assignment problems and submitting your solutions.

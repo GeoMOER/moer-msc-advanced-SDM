@@ -1,12 +1,13 @@
 ---
-title: Assignment 02-01
+title: "Assignment: 02-01"
 header:
   image: '/assets/images/teaserimages/landscape.png'
   caption: 'Generated with [deepai.org](https://deepai.org/machine-learning-model/cyberpunk-generator){:target="_blank"}'
   
 ---
 
-
+In this assignment you will use your knowledge from the previous session to creste your own little kingdom. Which mean you will now create a country with neutral landscape models. 
+In this assignment, you will harness the skills and concepts learned in the previous session to go on a creative journey: designing your own artificial country. Using Neutral Landscape Models (NLMs), you will generate a diverse and unique landscape that represents your artificial country.
 <!--more-->
 
 
@@ -14,23 +15,33 @@ header:
 ![image](../assets/images/unit02/realm.jpg)
 *Image: Generated with [deepai.org](https://deepai.org/machine-learning-model/cyberpunk-generator)*
 
-
-
-
 {% capture Assignment-1-1 %}
+Please do the following exercises until the next session:
 
-Implement and check working environment setup
+1. You may choose to work individually or in teams of up to two people.
+1. Generate a total of 12 **different** NLMs.
+1. Stack all generated layers together into one `SpatRaster`
+1. Come up with a name for your country.
+1. Name each layer in consecutive order, following this format: `countryname1`, `countryname2`, `countryname3`, ..., `countryname20`.
+1. Save the layers as a single `.tif` file using the naming convention: `countryname.tif`.
+1. save the layers as one `.tif` file using the following naming convention: name.tif
+1. Upload the `.tif` file to ILIAS along with a `PDF` file that briefly describes your artificial landscapes.
 
-1. Set up and check the basic working environment as explained in the previous exercise.
-1. Check if the installation of `tensorflow` and `keras` was successful. Copy the following script from the vignette "Getting Started with Keras" into the editor and execute it step by step. Compare the results with the vignette. 
-<script src="https://gist.github.com/uilehre/7e70cba9f3a9fa4a57ea2ea2cfc6d616.js"></script>
-1. If it fails, write and upload a short error report. Your report should include what you have done so far to attempt to solve the problem. Please include the output of `sessionInfo()` in your report as well. If everything works fine, just write this in the report.
 
+**Note:** When you upload your data make sure you add both your names if you work in teams.
+
+**Note2:** Have a look at the [vignette](https://ropensci.github.io/NLMR/index.html) of NLMR for help and inspiration. 
 
 {% endcapture %}
 <div class="notice--success">
   {{ Assignment-1-1 | markdownify }}
 </div> 
 
+### Further development of your artificial landscape (Optional!)
+If you want to give your virtual country an even more realistic feel to it you can als create a border and crop it to it. This can be done for example with loading the .tif file in a GIS software (like QGIS) and drawing a polygon of the country borders. Another way to do this is with the code snippet below. If you do this also upload a `.gpkg` of your border to ILIAS and crop your virtual landscapes to the border bevore you upload it. This is completely optional.
 
+<script src="https://gist.github.com/uilehre/e8328e3202f660213498298e43f3cca9.js"></script>
 
+In the end your landscape with border could look like this:
+
+![image](../assets/images/unit02/border.png)

@@ -59,14 +59,15 @@ Weekday hh:mm - hh:mm.
 | Session |  Date | Topic                        | Content                                                                          |
 |---------|-------|------------------------------|----------------------------------------------------------------------------------|
 ||| **SDM Basics** ||
-| 01 | DD.MM.YYYY | Basic tools for this course     | Course introduction, expectations, organisational matters, R, R Studio, R Markdown, GitHub     |
+| 01 | DD.MM.YYYY | The very basics     | Course introduction, expectations, organisational matters, R, R Studio, R Markdown, GitHub     |
 | 02 | DD.MM.YYYY | SDM Basics                   | What is SDM, how does it works and why do we need it?                  |
 | 03 | DD.MM.YYYY | SDM methods     | Common methods, software and R packages used for SDM |
-| 04 | DD.MM.YYYY |   ??                           |  |
+| 04 | DD.MM.YYYY | Exemplary SDM workflow                           |  |
 | 05 | DD.MM.YYYY |   ??                |                           |
 ||| **Virtual species**                   |        |
-| 06 | DD.MM.YYYY | How to Frankenstein Your Own Species | Generate virtual species with different ecological niches          |
-| 07 | DD.MM.YYYY | Exemplary SDM workflow                 | Model fitting, assessment, and predictions                                 |
+| 06 | DD.MM.YYYY | Artificial landscapes | Create neutral landscape models           |
+| 06 | DD.MM.YYYY | Virtual species | Generate virtual species with different ecological niches          |
+| 07 | DD.MM.YYYY | ...                 | Model fitting, assessment, and predictions                                 |
 ||| **From idea to insight: Your personal research project**           ||
 | 08 | DD.MM.YYYY | Research gaps in SDM         |                                         |
 | 09 | DD.MM.YYYY | Create your own experimental setup   | What do you want to research and why? How to set up an experimental design to test your hypothesis|
