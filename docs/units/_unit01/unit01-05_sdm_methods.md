@@ -8,3 +8,7 @@ header:
 xx
 <!--more-->
 
+-> different sdm methods
+- > pa, po, pb 
+
+spatial autiocrrelation

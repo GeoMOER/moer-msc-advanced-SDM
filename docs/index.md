@@ -67,7 +67,7 @@ Weekday hh:mm - hh:mm.
 ||| **Virtual species**                   |        |
 | 06 | DD.MM.YYYY | Artificial landscapes | Create neutral landscape models           |
 | 06 | DD.MM.YYYY | Virtual species | Generate virtual species with different ecological niches          |
-| 07 | DD.MM.YYYY | ...                 | Model fitting, assessment, and predictions                                 |
+| 07 | DD.MM.YYYY | Sample presence-absence points                | Create reslasitc presence-absence data for your virtual species and create traing and test datasets.                                 |
 ||| **From idea to insight: Your personal research project**           ||
 | 08 | DD.MM.YYYY | Research gaps in SDM         |                                         |
 | 09 | DD.MM.YYYY | Create your own experimental setup   | What do you want to research and why? How to set up an experimental design to test your hypothesis|

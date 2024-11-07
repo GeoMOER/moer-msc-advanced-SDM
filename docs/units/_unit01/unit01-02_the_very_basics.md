@@ -53,8 +53,8 @@ r=terra::rast(paste0(file_path, "ch.bag.zeckenstichmodell_2056.tif"))
 terra::plot(r)
 ```
 
-![image](../assets/images/unit01/sw_r_plot.png)
-
+![image](../assets/images/unit01/sw_r_plot.png)<br>
+<sub><sup>*Datasource: BAG / A&amp;K Strategy GmbH*</sup></sub>
 
 Now that the data is loaded and verified, move to** tidyterra** and **ggplot2** to generate a more flexible and customizable plot. Begin by using geom_spatraster() from the **tidyterra** package to map the spatial raster data. If your dataset has multiple layers, you could also use facet_wrap() to separate them.
 
@@ -68,7 +68,8 @@ ggplot() +
   facet_wrap(~lyr)
 ```
 
-![image](../assets/images/unit01/tidyterra.png)
+![image](../assets/images/unit01/tidyterra.png)<br>
+<sub><sup>*Datasource: BAG / A&amp;K Strategy GmbH*</sup></sub>
 
 ## Exercise:
 Now, create a map with the following features:
@@ -78,7 +79,7 @@ Now, create a map with the following features:
 * **Spectral Color Scheme**: Apply a blue-to-red gradient (blue for low, red for high probability of species occurrence).
 * **Rename Raster**: Add a clear header to the raster layer
 
-**Help and Resources**: Have a look at the vignette of [**tidyterra**]( https://dieghernan.github.io/tidyterra/) and also use funcrtionalities of [**ggplot2**]( https://ggplot2.tidyverse.org/). And in doubt always ask stack overflow.
+**Help and Resources**: Have a look at the vignette of [**tidyterra**]( https://dieghernan.github.io/tidyterra/) and also use functionalities of [**ggplot2**]( https://ggplot2.tidyverse.org/). And in doubt always ask stack overflow.
 {: .notice--info}
 
 ### Expected output
@@ -86,5 +87,6 @@ Your map should look somewhat similar to this:
 
 
 
-![image](../assets/images/unit01/final_tidyterra_plot.png)
+![image](../assets/images/unit01/final_tidyterra_plot.png)<br>
+<sub><sup>*Datasource: BAG / A&amp;K Strategy GmbH*</sup></sub>
 

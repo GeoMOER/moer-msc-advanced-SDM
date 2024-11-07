@@ -2,7 +2,7 @@
 title: Artificial landscapes
 header:
   image: '/assets/images/teaserimages/landscape.png'
-  caption: 'Generated with [deepai.org](https://deepai.org/machine-learning-model/cyberpunk-generator){:target="_blank"}'
+  caption: '紅色死神 via [flickr.com](https://flic.kr/p/2p6ah3Q). [CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/). Image cropped.'
 
 ---
 
@@ -55,13 +55,28 @@ If any layers have a larger extent, use the function `terra::crop` to adjust the
 
 <script src="https://gist.github.com/uilehre/4713c1667fe1cea7b0bf0b5d600637ef.js"></script>
 
-Once completed, you’ll have a comprehensive environmental dataset ready for analysis or modeling. Your dataset look somewhat like the one in the following figure (plotted with **tidyterra** as explained in [Unit 01](../unit01/unit01-02_the_very_basics.html#advanced-visualization-optional) ):
+**Note:** NLMR has no support for the **terra** package yet, therefore we will transform each of the NLMs to a `spatRaster` after creating it.
+{: .notice--info}
 
-## Additional learning material: Multicorrelinarity between environmental variables
+Once completed, you’ll have a comprehensive environmental dataset ready for analysis or modeling. Your dataset look somewhat like the one in the following figure (continuous variables plotted with **tidyterra** as explained in [Unit 01](../unit01/unit01-02_the_very_basics.html#advanced-visualization-optional) ):
 
-Multicollinearity refers to the situation in which two or more predictor variables in a statistical model are highly correlated, meaning that they provide redundant information about the variance in the outcome variable. This phenomenon is particularly common in ecological and environmental studies, where multiple variables can be interrelated, such as temperature, precipitation, and humidity.
+![image](../assets/images/unit02/NLMs.png)
 
+#### Additional learning material: Multicorrelinarity between environmental variables
 
+In ecological modeling, researchers frequently incorporate a substantial number of environmental variables. In Species Distribution Modeling the number of variables can easily exceed 100 variables (e.g., [Bald et al. 2024](http://dx.doi.org/10.1002/ece3.11571)). This can quickly lead to a situation in which two or more predictor variables in a model are highly correlated, meaning that they provide redundant information about the variance in the outcome. This phenomenon, known as collinearity, is prevalent in ecological and environmental studies, particularly among interrelated variables such as temperature, precipitation, and humidity.
+
+Collinearity can affect model performance by inflating metrics, which may result in the incorrect identification of important environmental predictors ([Dormann et al. 2012](https://doi.org/10.1111/j.1600-0587.2012.07348.x)). Consequently, it is advisable to evaluate the correlation among variables prior to model development. This can be done with a simple function in R. As a result, you will get a correlation matrix which shows you the positive and negative correlations between variables, along with their respective strengths. To mitigate the impact of collinearity, it is advisable to establish a threshold, (e.g., 0.8), and to exclude variables that exceed this threshold. 
+
+For further insights into the implications of collinearity in ecological modeling, refer to the study by [Dormann et al. (2012)](https://doi.org/10.1111/j.1600-0587.2012.07348.x). 
+
+You can use the script below to create a correlation matrix for the six NLMs we created in the esxercise above.
+
+<script src="https://gist.github.com/uilehre/287d89fc6e3eaaec26eae32f70ac12c7.js"></script>
+
+In the end your confusion matrix should look like this:
+
+![image](../assets/images/unit02/cor.png)
 
 ## Further reading:
 Grimmett, L., Whitsed, R., & Horta, A. (2021). Creating virtual species to test species distribution models: The importance of landscape structure, dispersal and population processes. Ecography, 44(5), 753–765. [https://doi.org/10.1111/ecog.05555](https://doi.org/10.1111/ecog.05555)

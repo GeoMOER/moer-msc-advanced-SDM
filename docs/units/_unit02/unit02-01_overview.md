@@ -2,7 +2,7 @@
 title: "Overview"
 header:
   image: '/assets/images/teaserimages/landscape.png'
-  caption: 'Generated with [deepai.org](https://deepai.org/machine-learning-model/cyberpunk-generator){:target="_blank"}'
+  caption: '紅色死神 via [flickr.com](https://flic.kr/p/2p6ah3Q). [CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/). Image cropped.'
 ---
 
 

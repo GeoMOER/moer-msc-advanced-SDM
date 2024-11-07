@@ -2,18 +2,18 @@
 title: "Assignment: 02-01"
 header:
   image: '/assets/images/teaserimages/landscape.png'
-  caption: 'Generated with [deepai.org](https://deepai.org/machine-learning-model/cyberpunk-generator){:target="_blank"}'
+  caption: '紅色死神 via [flickr.com](https://flic.kr/p/2p6ah3Q). [CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/). Image cropped.'
   
 ---
 
-In this assignment you will use your knowledge from the previous session to creste your own little kingdom. Which mean you will now create a country with neutral landscape models. 
+In this assignment you will use your knowledge from the previous session to create your own little kingdom. Which mean you will now create a country with neutral landscape models. 
 In this assignment, you will harness the skills and concepts learned in the previous session to go on a creative journey: designing your own artificial country. Using Neutral Landscape Models (NLMs), you will generate a diverse and unique landscape that represents your artificial country.
 <!--more-->
 
 
-
 ![image](../assets/images/unit02/realm.jpg)
 *Image: Generated with [deepai.org](https://deepai.org/machine-learning-model/cyberpunk-generator)*
+
 
 {% capture Assignment-1-1 %}
 Please do the following exercises until the next session:
