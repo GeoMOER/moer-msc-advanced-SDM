@@ -1,53 +1,31 @@
 ---
-title: "Assignment: SDM background knowledge" 
+title: "Assignment: 01-01" 
 header:
   image: '/assets/images/teaserimages/felder.png'
   caption: '[Marco Verch via ccnull.de](https://ccnull.de/foto/drohnenaufnahme-von-landwirtschaftlichen-feldern-mit-geometrischen-mustern/1105470). [CC-BY 2.0](https://creativecommons.org/licenses/by/2.0/de/). Image cropped.'
 ---
 
-This assignment introduces you to R, R scripts and R markdown. Your submission will be pushed to your class repository at GitHub. After completion you should have gained some experience in running R commands within scripts, R markdown for running code and documentation within one file and Git/GitHub.
+{% capture Assignment-1-1 %}
+Unit next session: 
 
-## Things you need for this assignment
-  * [R](https://cran.r-project.org/){:target="_blank"} — the interpreter can be installed on any operation system.
-  * [RStudio](https://www.rstudio.com/){:target="_blank"} — we recommend to use R Studio for (interactive) programming with R.
-  * [Git](https://git-scm.com/downloads){:target="_blank"} environment for your operating system. For Windows users with little experience on the command line we recommend [GitHub Desktop](https://desktop.github.com/){:target="_blank"}.
+1. pick one of the papers from the list below
+1. read the paper
+1. Summarize it in a few sentences what it is about
+1. Wirte three to five key informations from the paper
 
-## Hello R and GitHub submission
-Please write an R script as an Rmd file with html output for the following task and commit it to your GitHub-based learning log:
+* upload to ILIAS
+* Be prepared to In the next session share what you have learned from the paper with your peers and do an exchane round
 
-1. Assign the value of 2 to a variable called `a` and the value of 5 to a variable called `b`.
-1. Compute the sum, difference, product and ratio of a and b (a always in the first place) and store the results to four different variables called `r1`, `r2`, `r3`, and `r4`.
-1. Create a vector `v1` which contains the values stored within the four variables from step 2.
-1. Add a fifth entry to vector `v1` which represents `a` by the power of `b` (i.e. `a**b`).
-1. Show the content of vector `v1` (e.g. use the `print` function or just type the variable name in a separate row).
-1. Create a second vector `v2` which contains information on the type of mathematical operation used to derive the five results. Hence this vector should have five entries of values *sum*, *difference*,...
-1. Show the content of vector `v2`.
-1. Combine the two vectors `v1` and `v2` into a data frame called `df`. Each vector should become one column of the data frame so you will end up with a data frame having 5 rows and 2 columns.
-1. Make sure that the column with the data of `v1` is named *Results* and `v2` is named *Operation*.
-1. Show the entire content of `df`.
-1. Show just the entry of the 3 row and 1 column.
-
-Save your Rmd file in your course repository, knitr it, update (i.e. commit) your local repository and publish (i.e. push) it to the GitHub classroom. Make sure that the created html file is also part of your GitHub repository.
-
-As you might become aware by reading this assignment, there is a great chance that you have to gather considerable more information to actually solve the given assignment. More precisely, once you have solved the R programming task you are not be off the hook since you have to familiarize yourself with Git and GitHub to actually submit your solution.
-{: .notice--warning}
-
-This assignment will not be marked.
-{: .notice--info}
+{% endcapture %}
+<div class="notice--success">
+  {{ Assignment-1-1 | markdownify }}
+</div>
 
 
+## Choose one of the following papers for your assignment:
 
+Guisan, A., & Zimmermann, N. E. (2000). **Predictive habitat distribution models in ecology**. Ecological Modelling, 135(2–3), 147–186. [https://doi.org/10.1016/S0304-3800(00)00354-9](https://doi.org/10.1016/S0304-3800(00)00354-9)
 
+Guisan, A., Tingley, R., Baumgartner, J. B., Naujokaitis‐Lewis, I., Sutcliffe, P. R., Tulloch, A. I. T., Regan, T. J., Brotons, L., McDonald‐Madden, E., Mantyka‐Pringle, C., Martin, T. G., Rhodes, J. R., Maggini, R., Setterfield, S. A., Elith, J., Schwartz, M. W., Wintle, B. A., Broennimann, O., Austin, M., … Buckley, Y. M. (2013). **Predicting species distributions for conservation decisions**. Ecology Letters, 16(12), 1424–1435. [https://doi.org/10.1111/ele.12189](https://doi.org/10.1111/ele.12189)
 
-## Comments?
-You can leave comments under this issue if you have questions or comments about the content on this page. Please copy the corresponding line into your comment to make it easier to answer the question. 
-
-
-
-<script src="https://utteranc.es/client.js"
-        repo="GeoMOER/moer-bsc-project-seminar-SDM"
-        issue-term="unit01-06_assignment"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
+Zurell, D., Franklin, J., König, C., Bouchet, P. J., Dormann, C. F., Elith, J., Fandos, G., Feng, X., Guillera‐Arroita, G., Guisan, A., Lahoz‐Monfort, J. J., Leitão, P. J., Park, D. S., Peterson, A. T., Rapacciuolo, G., Schmatz, D. R., Schröder, B., Serra‐Diaz, J. M., Thuiller, W., … Merow, C. (2020). **A standard protocol for reporting species distribution models**. Ecography, 43(9), 1261–1277. [https://doi.org/10.1111/ecog.04960](https://doi.org/10.1111/ecog.04960)

@@ -6,38 +6,28 @@ header:
   
 ---
 
-
-
-
-In this assignment you will use your knowledge from the previous session to creste your own little kingdom. Which mean you will now create a country with neutral landscape models. 
-In this assignment, you will harness the skills and concepts learned in the previous session to go on a creative journey: designing your own artificial country. Using Neutral Landscape Models (NLMs), you will generate a diverse and unique landscape that represents your artificial country.
+In this assignment we will use everything we have learnt so far to create virtual species. We will use the NLMs as environmental variables and the different functionalities from the `virtualspecies` R package to create virtual species for each of your previously designed “countries”.
 <!--more-->
 
-
-
 ![image](../assets/images/unit02/virtualspecies.png)
-
 *Image: Virtual species. Generated with [deepai.org](https://deepai.org/machine-learning-model/cyberpunk-generator)*
-
 
 {% capture Assignment-1-1 %}
 Please do the following exercises until the next session:
 
 1. You may choose to work individually or in teams of up to two people.
-1. Generate a total of 12 **different** NLMs.
-1. Stack all generated layers together into one `SpatRaster`
-1. Come up with a name for your country.
-1. Name each layer in consecutive order, following this format: `countryname1`, `countryname2`, `countryname3`, ..., `countryname20`.
-1. Save the layers as a single `.tif` file using the naming convention: `countryname.tif`.
-1. save the layers as one `.tif` file using the following naming convention: name.tif
-1. Upload the `.tif` file to ILIAS along with a `PDF` file that briefly describes your artificial landscapes.
+1. Use the 12 NLMs you prepared in the last exercise as environmental variables.
+1. create in total 5 virtual species
+	* Create three random species with 3 to 5 environmental variables, setting the niche breadth once to `wide`, once to `any`, and once to `narrow`.
+	* …
+1. Give each species a name (e.g., species1, species2, species3, …)
+1. Save the virtual species objects as .RDS files to keep all the different 
+1. Zip all species together in a `.zip` file and upload them to ILIAS along with a `PDF` file that briefly describes your species (e.g., niche breadth, used variables, response functions of the species to the environment…).
 
 
 **Note:** When you upload your data make sure you add both your names if you work in teams.
 
-**Note2:** Have a look at the [vignette](https://ropensci.github.io/NLMR/index.html) of NLMR for help and inspiration. 
-
 {% endcapture %}
 <div class="notice--success">
   {{ Assignment-1-1 | markdownify }}
-</div> 
+</div>

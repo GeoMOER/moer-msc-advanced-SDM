@@ -29,15 +29,10 @@ lapply(list.of.packages, library, character.only = TRUE)
 #-----------------------------------------#
 
 r=terra::rast("C:/DATA/Lehre/moer-msc-advanced-SDM/data/NLMs.tif")
-  
+# have a look at your rasters  
 plot(r)  
 
-# 3 - plot some response functions ####
-#-------------------------------------#
-
-
-
-# 4 - create random virtual species ####
+# 3 - create random virtual species ####
 #--------------------------------------#
 
 # make sure your variables are named:
@@ -46,17 +41,19 @@ names(r) <- paste0("NLM", 1:6)
 # the simplest way to create a species is by using the "generateRandomSp" function and just using a raster stack with all variables
 random.sp <- generateRandomSp(r,  niche.breadth="wide")
 
-pca<- terra::princomp(r)
-r3<-terra::predict(r,pca)
-terra::plot(r3)
-# 5 - create ...
-
-r=terra::rast("C:/DATA/test/vegetation_coverage_01m_CHM.tif")
-r
 
 
 
 
+#################################
+
+# SECOND PART SP WITH RESPONSE FUNCTIONS
+
+#################################
+
+
+# 4 - plot some response functions ####
+#-------------------------------------#
 
 
 
