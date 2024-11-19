@@ -21,7 +21,7 @@ The general workflow that involves creating virtual species can be found in the 
 [![Stages involved in the simulation of a virtual species.](https://nsojournals.onlinelibrary.wiley.com/cms/asset/8305d1b7-e4b8-42c0-96d4-80ee503c6fd4/ecog12443-fig-0001-m.jpg)](https://nsojournals.onlinelibrary.wiley.com/cms/asset/8305d1b7-e4b8-42c0-96d4-80ee503c6fd4/ecog12443-fig-0001-m.jpg)
  *Image: Stages involved in the simulation of a virtual species. Image from [Meynard et al. 2019](https://doi.org/10.1111/ecog.04385).*
 
-## Creating virtual species
+## Creating random virtual species
 
 When creating virtual species, several factors can significantly impact the results and subsequent testing of SDMs. Considerations include:
 1.	Niche Breadth: Does the virtual species occupy a broad or narrow ecological niche? It is a good idea to have several species with different niche breadth.
@@ -37,9 +37,34 @@ As a result, three rasters are generated: suitability, probability of occurrence
 
 ![image](../assets/images/unit02/random_sp.png)
 
-## Create virtual species with 
+## Create virtual species by defining response functions
 
-[Insert Figure of Species-Environment Relationship]
+The second, more complex way, to define virtual species is by defining each response frunction
+
+The following transformations of the environmental variables are possible:
+* linear function
+* Quadratic function
+* Logistic function
+* beta response functions
+* normal distribution
+* or you can write your own function
+
+How these functions transform the environmental variable NLM1 we created in the last session can be seen in the figure below:
+
+
+![image](../assets/images/unit02/functions2.png)
+*Image: 
+
+
+<script src="https://gist.github.com/uilehre/a11772a19b96224f129dd8789a2f75e9.js"></script>
+
+![image](../assets/images/unit02/function_species.png)
+*Image: 
+
+ Tip:
+ It might be a good idea to plot the reponse function of the vairbales bevore creating the species to get an idea about how the differnet repionseesy will interact and what this means for the species. If you transform the values completely out of the  range of a species there might be no suitability. 
+
+<script src="https://gist.github.com/uilehre/0596a1a215b61256d3e0a3d2cfead7b1.js"></script>
 
 
 ## Further reading
