@@ -27,16 +27,10 @@ Biodiversity and Biogeography Research: SDMs help scientists explore patterns in
 
 For a deeper understanding, students could be assigned a foundational paper or recent review on SDM applications, illustrating the practical implications of these models in various contexts.
 
-	Paper lessen lassen?
-	Zurell?
-	-> 
 
-* different names for sdms
-
-## Why do we need it?
-
-* paper lesen lasssen?
 
 ## Why is it problematic?
 
 * jetzt paper
+
+## maybe real live example here as in where it is used in german governmetn etc...

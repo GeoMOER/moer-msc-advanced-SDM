@@ -1,4 +1,4 @@
-#'@name virtual_species.R
+#'@name unit02_virtual_species.R
 #'@date 04.11.2024
 #'@author Lisa Bald [bald@staff.uni-marburg.de]
 #'@description create virtual species based on NLMs 
@@ -106,35 +106,47 @@ rm(b1,l1,log1,a1,v,quadraticplot,logisticplot,linearplot,betaplot,q1,v1,p,list.o
 
 plot(r)
 
-# create first virtual species with 
 
+### Example Code:
+# Define the response functions for the environmental variables
 params <- formatFunctions(NLM4 = c(fun = 'logisticFun', alpha = -0.1, beta = 0.25),
                           NLM2 = c(fun = 'quadraticFun', a = -1, b = 1, c = 0.8),
-                          NLM1 = c(fun = 'betaFun', p1=0.25, p2=0.55, alpha=0.2, gamma=0.4))
+                          NLM1 = c(fun = 'betaFun', p1 = 0.25, p2 = 0.55, alpha = 0.2, gamma = 0.4))
 
-# Generation of the virtual species
+# Generate the virtual species based on the defined parameters and formula
 species1 <- generateSpFromFun(raster.stack = r[[c("NLM4", "NLM2", "NLM1")]],
-                                 parameters = params,
-                                 formula = "5.5 * NLM4^2 - 3 * sqrt(NLM2) +0.5*NLM1",
-                                 plot = TRUE)
+                              parameters = params,
+                              formula = "5.5 * NLM4^2 - 3 * sqrt(NLM2) + 0.5 * NLM1",  # Formula defining suitability
+                              plot = TRUE)  # Plot the environmental suitability map
 
-species1PA=convertToPA(species1, plot = TRUE)
+# Convert the continuous suitability values to presence-absence data
+species1PA <- convertToPA(species1, plot = TRUE)  # Generate and plot presence-absence map
 
-# Tip:
-# It might be a good idea to plot the reponse function of the vairbales bevore creating the species to get an idea about how the 
-# differnet repionseesy will interact and what this means for the species. If you transform the values completely out of the 
-# range of a species there might be no suitability. 
+if(!dir.exists("data/virtualSpecies/")) dir.create("data/virtualSpecies/")
+speciesList=list(species1, species1PA)
+saveRDS(speciesList, "data/virtualSpecies/species1.RDS")
 
 
-# save the species in the following format:
+## Plot
+
+# Load the necessary library for plotting
 library(ggplot2)
-v = terra::values(r$NLM1)
-q1 <- virtualspecies::quadraticFun(v, a = -1, b = 1, c = 0.8)
-quadraticplot <- ggplot(data.frame(x=v, y=q1), aes(x = v, y = q1)) +
-  geom_point(color=rgb(0.4, 0.4, 0.8, 0.6), size=2) +
-  labs(x="Value range environmental variable", y="Suitability for species", 
-       title="Quadratic function")
 
+# Extract the values from the environmental variable raster using the terra package
+v = terra::values(r$NLM1)
+
+# Apply the quadratic response function from the virtualspecies package to the environmental variable values (v)
+q1 <- virtualspecies::quadraticFun(v, a = -1, b = 1, c = 0.8)
+
+# Create a plot using ggplot2 to visualize the relationship between the environmental variable values and species suitability
+# The x-axis represents the environmental variable values (v), and the y-axis represents the suitability values (q1)
+ggplot(data.frame(x = v, y = q1), aes(x = v, y = q1)) +
+  geom_point(color = rgb(0.4, 0.4, 0.8, 0.6), size = 2) +  # Plot the points with a semi-transparent color and size 2
+  labs(x = "Value range environmental variable", 
+       y = "Suitability for species",  # Labels for the x and y axes
+       title = "Quadratic function")  # Title of the plot
+
+# Note: if your rasters are very larkge it can take a while. You can also do it on a subsample.
 
 
 

@@ -38,33 +38,43 @@ As a result, three rasters are generated: suitability, probability of occurrence
 ![image](../assets/images/unit02/random_sp.png)
 
 ## Create virtual species by defining response functions
+The second, more complex way to define virtual species is by specifying the response of the species to each variable individually. The simplest way to illustrate this concept is with an example involving temperature. For instance, we could assume a linear relationship between the habitat suitability of the species and temperature, such that as the temperature increases, the habitat becomes less suitable for the species. However, other types of relationships are also conceivable. For example, there might be an optimal temperature range for the species, where temperatures that are too high or too low make the habitat unsuitable.
 
-The second, more complex way, to define virtual species is by defining each response frunction
+By defining these relationships, we can model different ways species respond to environmental variables. The `virtualspecies` package provides several built-in functions to simulate these species' responses to different variables. To achieve this, the variables are transformed using a function.
 
-The following transformations of the environmental variables are possible:
-* linear function
-* Quadratic function
-* Logistic function
-* beta response functions
-* normal distribution
-* or you can write your own function
+### Available transformations of environmental variables:
+- **Linear function**: Assumes a direct relationship between the variable and suitability.
+- **Quadratic function**: Models a peak or trough in the response.
+- **Logistic function**: Creates an S-shaped curve, often used for threshold responses.
+- **Beta response functions**: Allows for a more flexible bell-shaped curve.
+- **Normal distribution**: Models a symmetrical response around an optimal value.
+- **Custom function**: You can define your own mathematical function for transformations.
 
-How these functions transform the environmental variable NLM1 we created in the last session can be seen in the figure below:
-
+The figure below demonstrates how these functions can transform the environmental variable `NLM1` created in the previous session.
 
 ![image](../assets/images/unit02/functions2.png)
-*Image: 
+*Image: : The values of the variable NLM1 transformed with a linear, beta, logistic and quadratic function.* 
 
+In this section, we will create a virtual species by defining its response to environmental variables using a custom function. To do this, we first use the function `formatFunction` to define how each environmental variable influences the species. You can work with one variable or multiple variables, but keep in mind that the more variables you include, the more complex it becomes to ensure that their suitability values do not contradict each other. Once the response functions are defined, we then specify a formula that determines how strongly each variable influences the habitat suitability of the species. This part is highly flexible, allowing you to be creative with how you combine the environmental variables. However, be sure that the variables you use in the formula correspond to the variables defined in the raster stack provided to the function and are consistent with the parameters you set. 
 
 <script src="https://gist.github.com/uilehre/a11772a19b96224f129dd8789a2f75e9.js"></script>
 
+The `generateSpFromFun` function does not automatically convert suitability values into presence-absence maps. To obtain the same output as with the `generateRandomSp` function, we use the `convertToPA` function for this conversion:
+
 ![image](../assets/images/unit02/function_species.png)
-*Image: 
 
- Tip:
- It might be a good idea to plot the reponse function of the vairbales bevore creating the species to get an idea about how the differnet repionseesy will interact and what this means for the species. If you transform the values completely out of the  range of a species there might be no suitability. 
 
+## Exercise
+
+
+Plot the habitat suitability response curves for different transformation functions and observe how they change as you adjust the values. Each course participant should choose one transformation function (e.g., `linear`, `logistic`, or `beta`) and read the corresponding help page to understand how it works. Experiment with plotting the response curve for your chosen function and explain how the parameters (e.g., `p1`, `p2`, `alpha`, `gamma` in the beta function) influence the shape and results of the curve. Explain the behavior of the functions to your peers.
+
+
+
+**Note:** It may in general be helpful to first plot the response functions of the environmental variables before creating virtual species. This approach will give you an idea of how the different responses interact with the environmental variables and how they affect the habitat suitability for the species. Here is some basic code to help you get started with plotting the response function:
 <script src="https://gist.github.com/uilehre/0596a1a215b61256d3e0a3d2cfead7b1.js"></script>
+{: .notice--info}
+
 
 
 ## Further reading
