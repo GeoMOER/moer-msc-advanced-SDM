@@ -34,3 +34,10 @@ For a deeper understanding, students could be assigned a foundational paper or r
 * jetzt paper
 
 ## maybe real live example here as in where it is used in german governmetn etc...
+
+## Real live examples
+Species distribution mdoelign is one of the tiopics that is not only very relevant to research but is also well established in consveration practice. There are numerous projects in gernmany on bundesbeene und federal stat ebene in which species distirbutiuon modeling is used. 
+Here you have a small collection of projects it is used in/for:
+Mopsmaps
+Windkraftsensible arten hessen
+Rheinland-pfalz

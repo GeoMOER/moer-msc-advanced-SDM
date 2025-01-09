@@ -7,6 +7,10 @@ header:
 
 ## workflow
 
+-> modeling real wiorld scenario myotis bechsteinii
+-> gbif worldclim show 
+-> why is it probelematic to work with this data?
+
 ## Evaluation
 
 ## issues with evaluation metrics

@@ -4,35 +4,16 @@ header:
   image: '/assets/images/teaserimages/landscape.png'
   caption: '紅色死神 via [flickr.com](https://flic.kr/p/2p6ah3Q). [CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/). Image cropped.'
 ---
-
-In this unit 
+In this unit, we will create an artificial dataset to test species distribution modeling. You will learn how to construct artificial landscapes and create virtual species on them. Additionally, you will explore critical aspects of designing realistic species and sampling points in a manner suitable for testing species distribution models.
 
 <!--more-->
 
+## Learning Objectives
+By the end of this unit, you should be able to:
 
-
-## Learning objectives
-At the end of this unit you should be able to
-
-*
-
-
-
-
-
-
-
-* tell the difference between levels of measurement, data types and object types and why they are so important,
-* distinguish between qualitative and quantitative data,
-* assess whether data is nominal, ordinal, interval and ratio scaled,
-* know different data types in R and create them,
-* know the object types in R and how data types are structured therein, 
-* find, address, and change elements in R objects using indexing, 
-* efficiently and consciously set up your work environment, and last but not least
-* start to feel comfortable with the usage of R.
-
-
-
-
-
-
+- Understand why variable selection is crucial for creating species distribution models.
+- Create Neutral Landscape Models in R.
+- Explain the purpose of virtual species and their advantages and disadvantages.
+- Create virtual species in R.
+- Transform probabilities of occurrence into presence-absence maps.
+- Sample points realistically for testing species distribution models.

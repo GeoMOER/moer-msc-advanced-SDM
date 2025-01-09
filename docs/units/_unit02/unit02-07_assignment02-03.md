@@ -6,28 +6,37 @@ header:
   
 ---
 
-In this assignment we will use everything we have learnt so far to create virtual species. We will use the NLMs as environmental variables and the different functionalities from the `virtualspecies` R package to create virtual species for each of your previously designed “countries”.
-<!--more-->
-
-![image](../assets/images/unit02/virtualspecies.png)
-*Image: Virtual species. Generated with [deepai.org](https://deepai.org/machine-learning-model/cyberpunk-generator)*
 
 {% capture Assignment-1-1 %}
-Please do the following exercises until the next session:
+For all virtual species created during this session, generate a dataset containing sampled presence-absence points. Follow these steps:
 
-1. You may choose to work individually or in teams of up to two people.
-1. Use the 12 NLMs you prepared in the last exercise as environmental variables.
-1. create in total 5 virtual species
-	* Create three random species with 3 to 5 environmental variables, setting the niche breadth once to `wide`, once to `any`, and once to `narrow`.
-	* …
-1. Give each species a name (e.g., species1, species2, species3, …)
-1. Save the virtual species objects as .RDS files to keep all the different 
-1. Zip all species together in a `.zip` file and upload them to ILIAS along with a `PDF` file that briefly describes your species (e.g., niche breadth, used variables, response functions of the species to the environment…).
+1. **Sample Presence-Absence Points**  
+   - For each species, sample varying amounts of presence-absence points.  
+   - Ensure diversity in dataset sizes: some species should have large datasets, while others should have smaller ones.
 
+2. **Introduce Spatial Sampling Bias**  
+   - For at least some species, introduce spatial sampling bias by limiting the sampled points to specific regions.
 
-**Note:** When you upload your data make sure you add both your names if you work in teams.
+3. **Add Additional Sampling Bias**  
+   - Incorporate other forms of bias, such as introducing an error probability in the presence-absence data for selected species.
+
+4. **Update the Virtual Species `.RDS` File**  
+   - Add the generated datasets to the `.RDS` file of virtual species created in the previous session.  
+   - Use the following script as a reference for modifying the `.RDS` file:  
+     <script src="https://gist.github.com/uilehre/a9e6fe7390af2636ddfcf9cf1cbb100b.js"></script>
+
+5. **Prepare Files for Submission**  
+   - Compress all `.RDS` files of the virtual species into a single `.zip` archive.  
+   - Create a `PDF` document describing each species, including details such as:
+     - Niche breadth.
+     - Environmental variables used.
+     - Response functions of the species to environmental variables.
+     - Error probabilities in the sampled presence-absence points.  
+   - Upload the `.zip` file and the `PDF` document to ILIAS.
+
 
 {% endcapture %}
 <div class="notice--success">
   {{ Assignment-1-1 | markdownify }}
 </div>
+

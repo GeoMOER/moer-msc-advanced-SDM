@@ -35,5 +35,79 @@ Most of the time, real-world sampling areas are not perfectly symmetrical. You c
 
 ## Introducing further sampling bias
 
+We will introduce two additional sampling biases into our presence-absence sampling strategy for the virtual species. First, we will incorporate the probability of detecting a species. This means that for species that are difficult to survey, absence points may still be recorded even if the species is actually present in the area. This reflects real-world conditions, particularly for mobile species such as birds or bats. In such cases, the statement "absence of evidence is not evidence of absence" applies.
+
+<script src="https://gist.github.com/uilehre/9d1321b6291ac2810e4185ada6e50fef.js"></script>
 
 
+If the detection probability is set to zero, the species cannot be detected at all. Conversely, if it is set to one, the species is always detected. In the example below, we demonstrate the results for a relatively low detection probability of 0.3. As shown, the species is often recorded as absent in areas where it is actually present.
+
+
+![image](../assets/images/unit02/detectionProbability.png)
+
+The second sampling, as seen in the code above, represents the error probability. This reflects potential errors that can occur during field sampling, where a species is not actually present but is incorrectly recorded as present in the dataset. Including this error probability in your dataset may result in output like the following (red rows in the table):
+
+<table>
+  <tr>
+    <th>x</th>
+    <th>y</th>
+    <th>Real</th>
+    <th>Observed</th>
+  </tr>
+  <tr>
+    <td>239.5</td>
+    <td>400.5</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>460.5</td>
+    <td>446.5</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr style="color: blue;">
+    <td>427.5</td>
+    <td>156.5</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>153.5</td>
+    <td>313.5</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>387.5</td>
+    <td>134.5</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>259.5</td>
+    <td>475.5</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr style="color: red;">
+    <td>241.5</td>
+    <td>33.5</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr style="color: red;">
+    <td>175.5</td>
+    <td>331.5</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>153.5</td>
+    <td>313.5</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+</table>
+
+*Table: The row highlighted in blue indicates a low detection probability, resulting in the species being present but undetected. Rows highlighted in red indicate detection errors where the species is absent but incorrectly recorded as present.* 

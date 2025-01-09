@@ -4,6 +4,7 @@
 #'@description sample presence absence points from the virtual species
 #'@misc: https://borisleroy.com/virtualspecies_tutorial/
 
+setwd("C:/DATA/Lehre/moer-msc-advanced-SDM/")
 
 # 1 - install and load packages  ####
 #-----------------------------------#
@@ -93,39 +94,46 @@ poPoints <- sampleOccurrences(
 # 4 - sampling bias ####
 #----------------------#
 
+poPoints <- sampleOccurrences(
+  pa,
+  sampling.area = samplingArea, # Restrict sampling to specific area
+  n = 300, # Number of points to sample
+  type = "presence-absence", # Sampling type
+  sample.prevalence = 0.5, # Prevalence rate
+  detection.probability = 0.3
+)
 
-
-
-
-
-
-
-
-
-
-
-points= sampleOccurrences(
-  pa$pa.raster,
-  30,
-  type = "presence only",
-  extract.probability = FALSE,
-  sampling.area = NULL,
-  detection.probability = 1,
-  correct.by.suitability = FALSE,
-  error.probability = 0,
-  bias = "no.bias",
-  bias.strength = 50,
-  bias.area = NULL,
-  weights = NULL,
-  sample.prevalence = NULL,
-  replacement = FALSE,
-  plot = TRUE
+poPoints <- sampleOccurrences(
+  pa,
+  sampling.area = samplingArea, # Restrict sampling to specific area
+  n = 300, # Number of points to sample
+  type = "presence-absence", # Sampling type
+  sample.prevalence = 0.5, # Prevalence rate
+  detection.probability = 0.3,
+  error.probability = 0.1
 )
 
 
 
 
-# create sampling bias with block cv package
+
+
+
+
+
+# Check if the directory "data/virtualSpecies/" exists. 
+# If it does not, create the directory.
+if(!dir.exists("data/virtualSpecies/")) dir.create("data/virtualSpecies/")
+
+# read virtual species
+species1=readRDS("data/virtualSpecies/species1.RDS")
+# add additional data as third element of the list
+species1[[3]]<- poPoints
+
+# Save the 'speciesList' object as an RDS file named "species1.RDS" 
+# in the "data/virtualSpecies/" directory.
+saveRDS(species1, "data/virtualSpecies/species1.RDS")
+
 
 
 
