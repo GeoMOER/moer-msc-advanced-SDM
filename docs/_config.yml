@@ -27,7 +27,7 @@ baseurl: "/moer-msc-advanced-SDM"
 
 
 ##### Title ###################################################################
-title: Advanced Species Distribution Modeling
+title: (Advanced) Species Distribution Modeling
 name: &name "Lab of Environmental Informatics" # &name is a YAML anchor which can be *referenced later
 email: lisa.bald@uni-marburg.de
 description: >- # this means to ignore newlines until next item
@@ -142,28 +142,48 @@ defaults:
       path: ""
       type: unit01
     values:
-      category: "01 SDM Basics"
+      category: "01 SDM basics"
       tags: "Unit 01"
       layout: single
       sidebar:
         nav: "course_unit" 
-  # unit02
+ # unit02
   - scope:
       path: ""
       type: unit02
     values:
-      category: "02 Virtual species"
+      category: "02 SDM workflow"
       tags: "Unit 02"
       layout: single
       sidebar:
-        nav: "course_unit" 
-  # unit03
+        nav: "course_unit"         
+  # unit02
   - scope:
       path: ""
       type: unit03
     values:
-      category: "03 From idea to insight: Your personal research project"
+      category: "03 Artificial landscapes"
       tags: "Unit 03"
+      layout: single
+      sidebar:
+        nav: "course_unit" 
+ # unit02
+  - scope:
+      path: ""
+      type: unit04
+    values:
+      category: "04 Virtual species"
+      tags: "Unit 04"
+      layout: single
+      sidebar:
+        nav: "course_unit"         
+  # unit03
+  - scope:
+      path: ""
+      type: unit05
+    values:
+      category: "05 From idea to insight: Your personal research project"
+      tags: "Unit 05"
       layout: single
       sidebar:
         nav: "course_unit" 

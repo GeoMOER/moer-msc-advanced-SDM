@@ -23,6 +23,17 @@ Here you find all learning materials, assignment tasks, and help.
 The structure is linear, so just work your way through it. 
 Of course you can also jump freely between units, but this is not recommended for beginners.
 
+### Structure of the HTML learning environment
+
+LM | 
+
+EX | 
+
+EX-A | Exercises for advanced participants
+
+A | Assignments
+
+
 
 ## Flexible learning with deadlines
 

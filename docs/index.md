@@ -1,5 +1,5 @@
 ---
-title: Advanced Species Distribution Modeling
+title: (Advanced) Species Distribution Modeling
 layout: splash
 date: '2024-02-15 13:00:00 +0100'
 header:
@@ -59,24 +59,22 @@ Weekday hh:mm - hh:mm.
 | Session |  Date | Topic                        | Content                                                                          |
 |---------|-------|------------------------------|----------------------------------------------------------------------------------|
 ||| **SDM Basics** ||
-| 01 | DD.MM.YYYY | The very basics     | Course introduction, expectations, organisational matters, R, R Studio, R Markdown, GitHub     |
-| 02 | DD.MM.YYYY | SDM Basics                   | What is SDM, how does it works and why do we need it?                  |
-| 03 | DD.MM.YYYY | SDM methods     | Common methods, software and R packages used for SDM |
-| 04 | DD.MM.YYYY | Exemplary SDM workflow                           |  |
-| 05 | DD.MM.YYYY |   ??                |                           |
+| 01 | 24.04.2025 | SDM basics     | Course introduction, expectations, organisational matters, R, R Studio, R Markdown, GitHub     |
+| 02 | 08.05.2025 | SDM methods                  | What is SDM, how does it works and why do we need it?                  |
+||| **SDM workflow**                   |        |
+| 03 | 15.05.2025 |      | Common methods, software and R packages used for SDM |
+| 04 | 22.05.2025 |                           |  |
+||| **Artificial landscapes**                   |        |
+| 05 | 05.06.2025 | Artificial landscapes | Create neutral landscape models |
 ||| **Virtual species**                   |        |
-| 06 | DD.MM.YYYY | Artificial landscapes | Create neutral landscape models           |
-| 06 | DD.MM.YYYY | Virtual species | Generate virtual species with different ecological niches          |
-| 07 | DD.MM.YYYY | Sample presence-absence points                | Create reslasitc presence-absence data for your virtual species and create traing and test datasets.                                 |
-||| **From idea to insight: Your personal research project**           ||
-| 08 | DD.MM.YYYY | Research gaps in SDM         |                                         |
-| 09 | DD.MM.YYYY | Create your own experimental setup   | What do you want to research and why? How to set up an experimental design to test your hypothesis|
-| 10 | DD.MM.YYYY | Your SDM project             | You can use the time of this session to work on your project and ask questions    |
-| 11 | DD.MM.YYYY | Your SDM project II          | You can use the time of this session to work on your project and ask questions    |
-| 12 | DD.MM.YYYY | **Present your project outline**  |                         |
-| 13 | DD.MM.YYYY | Your SDM project III          |  You can use the time of this session to work on your project and ask questions   |
+| 06 | 12.06.2025 | Virtual species | Generate virtual species with different ecological niches|
+| 07 | 26.06.2025 | Sample presence-absence points                | Create realistic presence-absence data for your virtual species and create traing and test datasets.|
+||| **From idea to insight: Your personal research project** ||
+| 08 | 03.07.2025 | Research gaps in SDM         |  |
+| 09 | 10.07.2025 | Create your own experimental setup | What do you want to research and why? How to set up an experimental design to test your hypothesis|
+| 10 | 17.07.2025 | **Present your project outline** |   |
 ||| **Synthesis**                                ||
-| 14 | DD.MM.YYYY | Wrap up                      | Get and give feedback from your peers and instructors, tell us how you self-assess your skills, and happy holidays |
+| 11 | 24.07.2025 | Wrap up                      | Get and give feedback from your peers and instructors, tell us how you self-assess your skills, and happy holidays |
 
 
 

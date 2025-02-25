@@ -1,30 +1,20 @@
 ---
 title: "Overview"
+toc: true
 header:
-  image: '/assets/images/teaserimages/ai.png'
-  caption: '[Marco Verch via ccnull.de](https://ccnull.de/foto/kuenstliche-intelligenz-bei-der-arbeit/1095606). [CC-BY 2.0](https://creativecommons.org/licenses/by/2.0/de/). Image cropped.'
+  image: '/assets/images/teaserimages/landscape.png'
+  caption: '紅色死神 via [flickr.com](https://flic.kr/p/2p6ah3Q). [CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/). Image cropped.'
 ---
-
-xx
+In this unit, we will create an artificial dataset to test species distribution modeling. You will learn how to construct artificial landscapes and create virtual species on them. Additionally, you will explore critical aspects of designing realistic species and sampling points in a manner suitable for testing species distribution models.
 
 <!--more-->
 
+## Learning Objectives
+By the end of this unit, you should be able to:
 
-## Learning objectives
-At the end of this unit you should be able to
-
-* distinguish between raster and vector data,
-* know the basics for using coordinate reference systems in R, 
-* know how to read in and write out spatial data, and
-* apply some basic vector and raster data manipulations.
-
-
-## Data Models
-
-Reality has far too much information and to is too complex to be fully represented by data.
-The basis for the reduction of complexity are data models. A data model is formed by the abstraction of individual objects (entities) and their properties (attributes). 
-In this abstraction process, the same object types are bundled (e.g. rivers, roads, urban areas).
-In the spatial data world and its implication in GIS, two completely different data models have been established for this purpose, which are called _raster model_ and _vector model_. 
-Both data models are principally usable for the representation of continuous properties as well as for discrete (geo-) objects. 
-In practice, however, continuous data is usually represented by the raster model and discrete data by the vector model.
-
+- Understand why variable selection is crucial for creating species distribution models.
+- Create Neutral Landscape Models in R.
+- Explain the purpose of virtual species and their advantages and disadvantages.
+- Create virtual species in R.
+- Transform probabilities of occurrence into presence-absence maps.
+- Sample points realistically for testing species distribution models.
