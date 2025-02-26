@@ -6,21 +6,29 @@ header:
   caption: '[Marco Verch via ccnull.de](https://ccnull.de/foto/drohnenaufnahme-von-landwirtschaftlichen-feldern-mit-geometrischen-mustern/1105470). [CC-BY 2.0](https://creativecommons.org/licenses/by/2.0/de/). Image cropped.'
 ---
 
-This document outlines essential concepts that shape species distribution and their interactions with the environment. Gaining a deeper understanding of these topics is crucial for developing effective species distribution models. Some of these terms will recur throughout the course, so it is highly recommended that you familiarize yourself with them.
+This section of the course outlines essential ecological concepts that are important to fully understand SDM and species interactions with the environment. Some of these terms will recur throughout the course, so it is highly recommended that you familiarize yourself with them now.
 
-### **Niche Breadth**
+### **Ecological niche and niche breadth**
+First, let's examine the concept of **niche breadth**. Species Distribution Modeling (SDM) is also known as **Environmental Niche Modeling**, but what exactly is a species' niche? The ecological niche encompasses not only the environmental conditions a species requires but also its role within the ecosystem, including interactions with other species. It can be divided into two main components ([Hutchinson 1957]( https://doi.org/10.1101/SQB.1957.022.01.039)):
 
-Niche breadth refers to the range of environmental conditions and resources a species can utilize. A species with a **broad niche** (generalist) can thrive in a variety of conditions and use diverse resources, while a **narrow niche** (specialist) is restricted to specific conditions and resources. Niche breadth influences species distribution, resilience to environmental changes, and competitive interactions.
+- [**Fundamental niche**]( https://en.wikipedia.org/wiki/Ecological_niche): The full range of environmental conditions in which a species could survive and reproduce, in the absence of [competition]( https://en.wikipedia.org/wiki/Competition_(biology)), [predation]( https://en.wikipedia.org/wiki/Predation), or other limiting factors.
+- [**Realized niche**]( https://en.wikipedia.org/wiki/Ecological_niche): The actual conditions and habitat where a species does exist, constrained by [biotic interactions]( https://en.wikipedia.org/wiki/Biological_interaction) such as competition, predation, and [mutualism]( https://en.wikipedia.org/wiki/Mutualism_(biology)).
 
-### **Sampling Strategy**
+Niche breadth refers to the range of environmental conditions and resources that a species can utilize. Species with a **broad niche**, also known as generalists, can thrive in a variety of conditions and make use of diverse resources. In contrast, species with a **narrow niche** (specialists) are limited to specific environmental conditions and resources. This distinction is important because it affects how species respond to environmental changes and interact with other species in their habitat.
 
-A well-designed sampling strategy ensures accurate ecological data collection. Common strategies include:
 
-- **Random Sampling**: Every location has an equal chance of being sampled, reducing bias.
-- **Systematic Sampling**: Regular intervals are used, ensuring even coverage of an area.
-- **Stratified Sampling**: The study area is divided into homogeneous subregions to capture variability.
-- **Adaptive Sampling**: Sampling effort increases where species presence is detected, improving efficiency in heterogeneous environments.
-  The choice of sampling strategy affects species distribution models and ecological inferences.
+### **Abiotic and Biotic Factors**
+
+The realized niche of a species can be influenced by biotic and abiotic factors:
+
+- [**Abiotic Factors**](https://en.wikipedia.org/wiki/Abiotic_component#:~:text=In%20biology%2C%20abiotic%20factors%20can,influences%20each%20of%20the%20above.): These are non-living environmental conditions, such as temperature, precipitation, soil type, and elevation, which can significantly influence where a species can survive.
+- [**Biotic Factors**](https://education.nationalgeographic.org/resource/resource-library-biotic-factors/): Interactions between species—such as competition, predation, mutualism, and disease—play a crucial role in determining species distributions.
+
+Often, abiotic and biotic factors interact, as in the case of how temperature can influence competitive interactions between species. Thus, it is essential to consider both factors when modeling species distributions to ensure accurate predictions.
+
+### **Fitness**
+
+[Fitness](https://en.wikipedia.org/wiki/Fitness_(biology)) is the ability of an organism to survive and reproduce in a given environment [(Orr 2009)](https://doi.org/10.1038/nrg2603). **Environmental conditions** invluence a species fitness, as optimal conditions enhance an organism's survival and reproductive success. **Genetic adaptation** also contributes, with species evolving traits suited to their specific habitats, which in turn affects their distribution. Additionally, **resource availability**, including access to food, mates, and shelter, directly impacts fitness.
 
 ### **Dispersal**
 
@@ -31,45 +39,14 @@ Dispersal is the movement of individuals from their birthplace to new locations,
 - **Human-mediated Dispersal**: Anthropogenic activities, such as trade and habitat fragmentation, alter natural dispersal patterns.
   Dispersal ability affects colonization success, genetic diversity, and responses to environmental change.
 
-### **Suitable Habitat: Where Are They Really?**
+### Environmental and geographic space: connecting ecological variables to species locations
 
-Species distributions do not always align with suitable habitat predictions due to factors such as dispersal limitations, species interactions, and historical biogeography. Key concepts include:
+SDM utilizes the relationship between **environmental space** and **geographic space**. **Environmental space** is defined by ecological variables such as climate and resource availability, representing the conditions that determine whether a species can survive in a given area. In contrast, **geographic space** refers to the actual physical locations where species are found.
 
-- **Realized vs. Fundamental Niche**: The fundamental niche represents the full range of conditions where a species *could* survive, whereas the realized niche is where it *actually* exists, constrained by competition and other factors.
-- **Habitat Connectivity**: The presence of ecological corridors or barriers affects species movement and persistence.
-- **Historical Factors**: Past climatic events and geological processes shape current distributions.
-  Understanding species presence versus habitat suitability helps refine distribution models.
+Species distribution models bridge these two concepts by linking a species’ ecological tolerances to its geographic distribution, predicting where it is likely to occur. 
 
-### **Suitability, Probability, and Presence-Absence Data**
 
-- **Habitat Suitability Models (HSMs)** predict the likelihood of species occurrence based on environmental variables.
-- **Probability of Occurrence**: Derived from statistical models, indicating the chance of finding a species at a given location.
-- **Presence-Absence (PA) Data**: Used in species distribution models, though absences can be due to non-detection rather than true absence.
-- **Thresholds**: Probability values must often be converted into binary presence-absence predictions for practical applications.
-  Reliable suitability assessments improve conservation planning and biodiversity management.
+### Further reading
+Hutchinson, G. E. (1957). Concluding remarks. Cold Spring Harbor Symposia on Quantitative Biology, 22, 415–427. [https://doi.org/10.1101/SQB.1957.022.01.039]( https://doi.org/10.1101/SQB.1957.022.01.039)
 
-### **Abiotic and Biotic Factors**
-
-- **Abiotic Factors**: Non-living environmental conditions affecting species distribution (e.g., temperature, precipitation, soil type, salinity, elevation).
-- **Biotic Factors**: Interactions with other organisms, including predation, competition, mutualism, and disease.
-- **Interaction Effects**: Abiotic and biotic factors often interact; for example, temperature can influence competition outcomes among species.
-  Accurately incorporating both factors is essential for robust species distribution models.
-
-### **Fitness**
-
-Fitness is an organism’s ability to survive and reproduce in its environment. It is influenced by:
-
-- **Environmental Conditions**: Optimal conditions enhance survival and reproduction.
-- **Genetic Adaptation**: Populations evolve traits suited to their habitats.
-- **Resource Availability**: Access to food, mates, and shelter directly impacts fitness.
-  Fitness landscapes help predict species distribution by identifying areas with favorable conditions for reproduction and survival.
-
-### **Environmental and Geographic Space**
-
-- **Environmental Space**: Defined by ecological variables (e.g., climate, soil, resource availability) that determine species viability.
-- **Geographic Space**: The actual physical locations where species occur.
-- **Species Distribution Models (SDMs)**: Link environmental space to geographic space, predicting species occurrences based on ecological tolerances.
-  Understanding the distinction helps refine habitat suitability assessments and conservation efforts.
-
-This material provides foundational knowledge to support species distribution studies and ecological modeling efforts.
-
+Orr, H. Fitness and its role in evolutionary genetics. Nat Rev Genet 10, 531–539 (2009). [https://doi.org/10.1038/nrg2603](https://doi.org/10.1038/nrg2603)

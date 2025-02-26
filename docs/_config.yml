@@ -182,7 +182,7 @@ defaults:
       path: ""
       type: unit05
     values:
-      category: "05 From idea to insight: Your personal research project"
+      category: "05 Your research project"
       tags: "Unit 05"
       layout: single
       sidebar:

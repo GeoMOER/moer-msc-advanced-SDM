@@ -34,7 +34,7 @@ r=terra::rast("bioclim.tif")
 # use the terra::predict function to create a spatial predcition:
 pred=terra::predict(object = r,model= mod, na.rm=T)
 
-# have a lookn at your predction
+# have a look at your predction
 terra::plot(pred)
 
 terra::writeRaster(pred, "prediction_aglais_caschmirensis.tif")
@@ -60,7 +60,7 @@ For the calculation of the AUC and the MAE we will use the background points ins
 testData=sf::read_sf("Aglais_caschmirensis_testData.gpkg")
 
 # calculate the boyce-index:
-boyceIndex=ecospat::ecospat.boyce(fit=raster(pred), obs=testData)
+boyceIndex=ecospat::ecospat.boyce(fit=pred, obs=sf::st_coordinates(testData))
 boyceIndex=boyceIndex$cor
 
 #extract the values of the testdata from the prediction raster for AUC and MAE

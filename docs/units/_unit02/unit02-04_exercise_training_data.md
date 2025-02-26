@@ -7,7 +7,7 @@ toc: true
 ---
 
 ## Exercise: Create your training data
-The with code below, you can prepare predictors and training data for species distribution modeling. We will use the butterflies in Pakistan dataset that you can find in ILIAS for demonstration purposes. First start by loading all necessary packages into R 
+The with code below, you can prepare predictors and training data for species distribution modeling. We will use the butterflies in Pakistan dataset that you can find in ILIAS for demonstration purposes. First start by loading all necessary packages into R. 
 Then set your working directory to a folder were you want to store the data for this exercise. Download the dataset "PakistanLadakh.csv" from ILIAS into the folder. Load the data into R with the function `read.csv` as a dataframe.
 
 ```r
@@ -46,7 +46,7 @@ Aglais_caschmirensis=sf::st_as_sf(Aglais_caschmirensis, coords=c("x", "y"), remo
 Have a look at the structure of your data again. What has changed?
 
 ### Environmental variables
-The code below retrieves environmental layers for Pakistan using the `geodata` package, we already used in [unit 03](../unit03/unit03-05_example_SpatialDataProcessing.html). It uses the function `worldclim_country()’ to download bioclimatic variables with a resolution of 10 arc-minutes (res=10), we choose this resolution to process the data fast, to get meaningful results a higher resolution might be better. The variable argument "var" is set to "bio" to specify the bioclimatic variables. 
+The code below retrieves environmental layers for Pakistan using the `geodata` package. It uses the function `worldclim_country()’ to download bioclimatic variables with a resolution of 10 arc-minutes (res=10), we choose this resolution to process the data fast, to get meaningful results a higher resolution might be better. The variable argument "var" is set to "bio" to specify the bioclimatic variables. 
 WorldClim provides a comprehensive set of bioclimatic variables that capture key aspects of climate across the globe. These variables are derived from long-term climate data and serve as valuable predictors in ecological and biogeographical studies. The WorldClim bioclimatic variables include measures such as temperature, precipitation, and seasonality. They offer insights into the annual and seasonal variations in climate, including parameters like mean annual temperature, temperature range, and precipitation of different months or seasons. Additionally, WorldClim provides indices related to water availability, moisture deficit, and heat stress. These bioclimatic variables enable users to assess the climatic conditions of specific regions and study their influence on species distribution patterns, ecological processes, and environmental responses.
 
 ```r
@@ -60,13 +60,11 @@ terra::writeRaster(r, "bioclim.tif", overwrite=T)
 ```
 
 ### Background data
-We will generate background points for modeling with presence-background data as we have no absence data available. It creates background points using the `randomPoints` function from the [`dismo` package]( https://cran.r-project.org/web/packages/dismo/index.html). The function takes a raster stack as input and generates a specified number of random points (in this case, 10,000 points) across all values of the raster that are not NA. We will then convert the resulting points to an sf object. The dismo package is not compatible with `terra` however, a successor to the package is already being developed that can handle terra objects - the package `predicts`.
+We will generate background points for modeling with presence-background data as we have no absence data available. It creates background points using the `randomPoints` function from the [`predicts` package]( https://cran.r-project.org/web/packages/predicts/index.html). The function takes a raster as input and generates a specified number of random points (in this case, 10,000 points) across all values of the raster that are not NA. We will then convert the resulting points to an sf object. 
 Then we will extract environmental information for both the background points and the species data. The `extract` function from the `terra` package is then used to extract the values of the bioclimatic variables for the corresponding points in the raster stack.
 ```r
 # create background points
-bg=sf::st_as_sf(as.data.frame(dismo::randomPoints(mask=raster::stack(r), n=10000)), crs=terra::crs(r), coords=c("x","y"), remove=F)
-#the successor package for dismo is predicts, and also works with terra, but unfortunately still a bit buggy:
-#bg=sf::st_as_sf(as.data.frame(predicts::backgroundSample(mask=r, n=1000)), crs=terra::crs(r), coords=c("x","y"), remove=F)
+bg=sf::st_as_sf(as.data.frame(predicts::backgroundSample(mask=r, n=1000)), crs=terra::crs(r), coords=c("x","y"), remove=F)
 
 # extract environmental information for background data
 bg_extr=terra::extract(r, bg)

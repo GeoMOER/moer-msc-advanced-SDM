@@ -1,30 +1,19 @@
 ---
 title: "Overview"
+toc: true
 header:
   image: '/assets/images/teaserimages/ai.png'
   caption: '[Marco Verch via ccnull.de](https://ccnull.de/foto/kuenstliche-intelligenz-bei-der-arbeit/1095606). [CC-BY 2.0](https://creativecommons.org/licenses/by/2.0/de/). Image cropped.'
 ---
 
-xx
+This unit is all about your final team project. Think about your research question and create a project outline as basis for your project. To finish this course it is mandatory to submit the final team project.
 
 <!--more-->
-
+You have almost made it! This is the last unit of the course in which you will apply what you have learned in the past units. Now you will be challenged to create your own team project from scratch that uses virtual species.
 
 ## Learning objectives
 At the end of this unit you should be able to
 
-* distinguish between raster and vector data,
-* know the basics for using coordinate reference systems in R, 
-* know how to read in and write out spatial data, and
-* apply some basic vector and raster data manipulations.
-
-
-## Data Models
-
-Reality has far too much information and to is too complex to be fully represented by data.
-The basis for the reduction of complexity are data models. A data model is formed by the abstraction of individual objects (entities) and their properties (attributes). 
-In this abstraction process, the same object types are bundled (e.g. rivers, roads, urban areas).
-In the spatial data world and its implication in GIS, two completely different data models have been established for this purpose, which are called _raster model_ and _vector model_. 
-Both data models are principally usable for the representation of continuous properties as well as for discrete (geo-) objects. 
-In practice, however, continuous data is usually represented by the raster model and discrete data by the vector model.
-
+* develop a research question,
+* plan and realize a research project from scratch, and
+* present your project in an appropriate format.

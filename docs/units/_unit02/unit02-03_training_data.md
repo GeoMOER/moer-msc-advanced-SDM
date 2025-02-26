@@ -6,7 +6,7 @@ header:
 toc: true
 ---
 
-The data of the species occurrence are referred to as training data, usually machine learning models are not trained with all data but only with a subset of data. For this purpose, the dataset must be split into several datasets.
+The data of the species occurrence are referred to as training data, usually machine learning models are not trained with all data but only with a subset of data. For this purpose, the dataset must be splitted into several datasets.
 Data splitting is an essential step in machine learning model development to assess model performance. The dataset is typically divided into three subsets: training data, validation data, and test data. The training data is used to train the model, where it learns patterns and relationships between the data. The validation data is used to tune the model's hyperparameters and evaluate its performance during the training process. It helps in selecting the best-performing model and preventing overfitting. Finally, the test data is kept separate and serves as an unbiased evaluation of the final model's performance on unseen data. It provides an estimation of how well the model will perform in real-world scenarios.
 
 ![](https://assets-global.website-files.com/5d7b77b063a9066d83e1209c/61568656a13218cdde7f6166_training-data-validation-test.png)

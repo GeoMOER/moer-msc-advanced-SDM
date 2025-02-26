@@ -1,16 +1,30 @@
 ---
-title: "Assignment: Project outline"
+title: "A | Assignment: 05-1"
+toc: true
 header:
   image: '/assets/images/teaserimages/ai.png'
   caption: '[Marco Verch via ccnull.de](https://ccnull.de/foto/kuenstliche-intelligenz-bei-der-arbeit/1095606). [CC-BY 2.0](https://creativecommons.org/licenses/by/2.0/de/). Image cropped.'
 ---
 
 
-* create teams
+   
+{% capture Assignment-04-01 %}
 
-* create project outline
+Write your project outline. Therefore
+1. find your group members and get to know each other,
+1. choose a research question,
+1. strictly follow the points mentioned under "Content and structure",
+1. upload your project outline to ILIAS until 14 July 2025 23:59 as one pdf file, and 
+1. present your outline during the session on 17 January 2025. Your presentation should not be longer than 10 minutes.
 
-* with workflow of your study design
+Again put your outline in a PDF document for upload on ILIAS.
+
+{% endcapture %}
+<div class="notice--success">
+  {{ Assignment-04-01 | markdownify }}
+</div>   
+
+
 
 
 Learn more about the requirements for creating a project outline and for the structure, content, and format of your research project.
@@ -30,32 +44,6 @@ The project outline should include
 Note that the project outline should not exceed two pages.
 These pages will help the instructors to give feedback on especially the feasibility of your project. 
 
-# Where to get data?
-After identifying the research question, a critical step is to find or create appropriate data sets for your modeling workflow.
-Some data source suggestions are:
-
-
-## Digital orthophotos
-You can download e.g. digital orthophotos of Hesse provided by the Hessische Verwaltung für Bodenmanagement und Geoinformation, [here](https://gds.hessen.de/INTERSHOP/web/WFS/HLBG-Geodaten-Site/de_DE/-/EUR/ViewDownloadcenter-Start).
-You can also download e.g. almost all geodata of North Rhine-Westphalia ([Geoportal NRW](https://www.geoportal.nrw/)) free of charge.
-
-Please also take into consideration that the file size and hence processing time of the DOPs depends on the selected study area.
-As a rough guideline,1GB roughly corresponds to 30km² (40cm resolution, RGBA).
-   
-   
-## Sentinel-2
-If your research question focuses on a topic with a larger extent or is out of the boundaries of Hesse/North Rhine-Westphalia, it is presumably required to download your data somewhere else. One possible data source is the Sentinel-2 mission. You can download Sentinel-2 data via the `sen2r-package`.
-   
-## Other sources
-In addition to the above mentioned data sources you can of course freely search for other sources of spatial data, 
-like e.g. [Geoportal NRW](https://www.geoportal.nrw/), [OpenStreetMap](https://www.openstreetmap.de/), [Kaggle](https://www.kaggle.com/), etc.
-
-You might also want to check out data sources related to LiDAR or digital elevation models, or use indices like the NDVI.
-
-You have also learnt to create your own shapefiles for obtaining training data. 
-This could be well necessary if there is no available data set for your (specific) topic.
-
-
 
 
 # Feedback
@@ -65,17 +53,3 @@ On the other hand, the feedback will be given in the session.
 In order to make the feedback understandable for everyone, your group should briefly present your outline within 5 minutes. 
 No slides are needed, the two-page outline is sufficient.
 
-
-
-## Comments?
-You can leave comments under this Issue if you have questions or remarks about the assignment. 
-
-
-
-<script src="https://utteranc.es/client.js"
-        repo="GeoMOER/geoAI"
-        issue-term="GeoAI_2021_unit_05_01_project_outline"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>

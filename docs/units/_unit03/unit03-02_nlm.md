@@ -8,7 +8,7 @@ header:
 ---
 
 
-In this unit, you'll learn how to create your own environmental data and generate virtual species for modeling purposes. This allows for a comprehensive comparison of species distribution models.
+In this unit, you will learn how to generate environmental data using Neutral Landscape Models (NLMs), which we will later use in the next unit to create virtual species.
 <!--more-->
 
 In this course, we aim to evaluate the performance of species distribution models when certain modeling conditions are altered. A key requirement for species distribution modeling is the availability of species occurrence data. For modeling, real-world occurrence data often comes from platforms like the [Global Biodiversity Information Facility (GBIF)]( https://www.gbif.org/), while environmental variables are commonly sourced from databases such as [WorldClim]( https://www.worldclim.org/) [(Fick & Hijmans 2017)]( https://rmets.onlinelibrary.wiley.com/doi/10.1002/joc.5086), which provides [bioclimatic data]( https://www.worldclim.org/data/bioclim.html).

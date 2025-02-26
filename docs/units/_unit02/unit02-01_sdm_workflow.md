@@ -1,5 +1,5 @@
 ---
-title: "Overview"
+title: "LM | SDM workflow"
 header:
   image: '/assets/images/unit05/butterfly.png'
   caption: '[Internet Archive Book Images via flickr.com](https://www.flickr.com/photos/internetarchivebookimages/page7) [public domain](https://creativecommons.org/publicdomain/zero/1.0/){:target="_blank"}'
@@ -9,9 +9,11 @@ toc: true
 
 If you are already experienced with SDM, you may be familiar with this workflow. However, please take a moment to recap it and refresh your knowledge.
 
+<!--more-->
+
 All SDM approaches have a similar generic workflow as outlined by [Zurell et. al 2020]( https://doi.org/10.1111/ecog.04960):
 
-<!--more-->
+
 
 {% include image.html url="https://onlinelibrary.wiley.com/cms/asset/5ed2893d-463a-4cd3-beda-cfd68271eece/ecog12602-fig-0001-m.png" description="The five main steps in the species distribution modelling cycle. Source: Zurell et. al 2020, https://doi.org/10.1111/ecog.04960." %}
 

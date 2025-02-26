@@ -6,9 +6,16 @@ header:
   caption: '紅色死神 via [flickr.com](https://flic.kr/p/2p6ah3Q). [CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/). Image cropped.'
   
 ---
+
+Here, you'll learn how to generate virtual species for modeling purposes, which will later allow us to conduct a comprehensive comparison of species distribution models.
+
+<!--more-->
+
 <p style="text-align: center; font-style: italic;">
 „Species distribution models (SDMs) have become one of the major predictive tools in ecology. However, multiple methodological choices are required during the modelling process, some of which may have a large impact on forecasting results. In this context, virtual species, i.e. the use of simulations involving a fictitious species for which we have perfect knowledge of its occurrence–environment relationships and other relevant characteristics, have become increasingly popular to test SDMs. This approach provides for a simple virtual ecologist framework under which to test model properties, as well as the effects of the different methodological choices, and allows teasing out the effects of targeted factors with great certainty. This simplification is therefore very useful in setting up modelling standards and best practice principles.” (<a href="https://doi.org/10.1111/ecog.04385">Meynard et al. 2019</a>)
 </p>
+
+
 
 As described in the excerpt above from the 2019 study by [Meynard et al.]( https://doi.org/10.1111/ecog.04385) virtual species have become an important tool today to evaluate and test species distribution models. To date, there are several frameworks that can be used to create virtual species. For example:
 -	virtualspecies ([Leroy et al. 2016](https://doi.org/10.1111/ecog.01388))

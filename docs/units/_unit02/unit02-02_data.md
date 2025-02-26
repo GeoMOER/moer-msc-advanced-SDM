@@ -6,9 +6,14 @@ header:
 toc: true
 ---
 
+This unit guides you through the entire process of creating a species distribution model, step by step. We will begin with the essential data needed for the model.
+
+<!--more-->
+
 ## Occurence records
 
 Species distribution modeling is only possible when some data on the occurrence of a species have been determined on-site by experts. In the map below you can see findings of `Aglais caschmirensis` in Pakistan from a dataset you can find in ILIAS.
+
 
 {% include media4 url="/assets/misc/occurence_records.html" %} [Full screen version of the map]({{ site.baseurl }}/assets/misc/occurence_records.html){:target="_blank"}
 
