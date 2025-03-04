@@ -8,6 +8,7 @@ toc: true
 
 This unit provides an introduction to species distribution modeling, covering key steps from data preparation and model training to model quality assessment. It serves as your starting point for understanding and applying species distribution models.
 
+<!--more-->
 
 ## Learning objectives
 

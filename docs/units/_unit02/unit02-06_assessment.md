@@ -46,8 +46,15 @@ terra::writeRaster(pred, "prediction_aglais_caschmirensis.tif")
 One of the major challenges in species distribution modeling is assessing how good a model performs. There are several metrics around that can be calculated on left out test data. One of the most popular ones is the `area under the receiver operating characteristic curve (AUC)`. It is heavily used to assess the performance of models, there are quite a few of other metrics for example the [mean absolute error]( https://en.wikipedia.org/wiki/Mean_absolute_error) or the [boyce index]( https://doi.org/10.1016/j.ecolmodel.2006.05.017), a quite comprehensive overview of performance metrics can be found in the paper by [Konowalik & Nosol 2021](https://doi.org/10.1038/s41598-020-80062-1).
 However most of these metrics are also somewhat controversial, there are entire studies dealing with the problematic use of some metrics. For example, the study [AUC: a misleading measure of the performance of predictive distribution models by Lobo et al. 2008](https://doi.org/10.1111/j.1466-8238.2007.00358.x). This makes it extremely difficult to assess the real performance of speices distribution models. In the comment from [Boris Leroy 2022]( https://doi.org/10.1111/jbi.14505), on the state of the art of species distribution modeling the topic of choosing performance metrics is listed as one of the unresolved problems of species distribution modeling.
 
-{% include image.html url=" https://onlinelibrary.wiley.com/cms/asset/9ed9242b-6282-4326-bfd0-c1de0e6f2c47/jbi14505-fig-0001-m.png
-" description=" Choosing presence-only species distribution models. Source: Boris Leroy 2022, https://doi.org/10.1111/jbi.14505." %}
+
+[![](https://onlinelibrary.wiley.com/cms/asset/9ed9242b-6282-4326-bfd0-c1de0e6f2c47/jbi14505-fig-0001-m.png)](https://doi.org/10.1111/jbi.14505)
+
+**Figure:** *Choosing presence-only species distribution models. Source: Boris Leroy 2022, [https://doi.org/10.1111/jbi.14505](https://doi.org/10.1111/jbi.14505).*
+
+
+
+
+
 In addition, metrics like the AUC are meant to be calculated with presence-absence data, which is often not available for testing predictions. We will test our model here with three metrics: the AUC, the Boyce index and the mean absolute error (MAE). For this we use the R packages Metrics and ecospat. 
 For the calculation of the AUC and the MAE we will use the background points instead of absence points. The AUC can take a value between 0 and 1, whereby a value of 0.5 describes a model that is as good as random, while a higher value describes a model that is better than random.
 
