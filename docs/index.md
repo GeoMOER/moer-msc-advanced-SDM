@@ -60,14 +60,17 @@ Thursday 09:00 - 11:45.
 |---------|-------|------------------------------|----------------------------------------------------------------------------------|
 ||| **SDM Basics** ||
 | 01 | 24.04.2025 | SDM basics     | Course introduction, expectations, organisational matters, R, R Studio, R Markdown    |
+|  | 01.05.2025 | *Public holiday*     |  *No session today*   |
 | 02 | 08.05.2025 | SDM methods                  | What is SDM, how does it works and why do we need it?                  |
 ||| **SDM workflow**                   |        |
 | 03 | 15.05.2025 |    Prepare some data for SDM  | Overview, conceptualisation, data processing for SDM |
 | 04 | 22.05.2025 |    Train your first model                       | Model fitting, assessment, and predictions |
+|  | 29.05.2025 | *Public holiday*     |  *No session today*   |
 ||| **Artificial landscapes**                   |        |
 | 05 | 05.06.2025 | Artificial landscapes | Create neutral landscape models |
 ||| **Virtual species**                   |        |
 | 06 | 12.06.2025 | Virtual species | Generate virtual species with different ecological niches|
+|  | 19.06.2025 | *Public holiday*     |  *No session today*   |
 | 07 | 26.06.2025 | Sample presence-absence points                | Create realistic presence-absence data for your virtual species and create training and testing datasets.|
 ||| **From idea to insight: Your personal research project** ||
 | 08 | 03.07.2025 | Your research project         | Select your research question and start to work on your project outline. |
