@@ -1,14 +1,16 @@
 ---
-title: "EX-A | Spatial evaluation (optional / advanced)"
+title: "EX | Spatial evaluation"
 header:
   image: '/assets/images/unit05/butterfly.png'
   caption: '[Internet Archive Book Images via flickr.com](https://www.flickr.com/photos/internetarchivebookimages/page7) [public domain](https://creativecommons.org/publicdomain/zero/1.0/){:target="_blank"}'
 toc: true
 ---
 
-
+<!--
 This is an optional exercise intended for advanced course participants.
 {: .notice--warning}
+-->
+
 
 In the last session, you learned how to evaluate your species distribution model by separating the data into training, validation, and testing datasets. We did this by randomly splitting the data, a well-established method in machine learning. However, when working with spatial data, this method has limitations. Traditional validation approaches, such as random cross-validation, may not be suitable for SDMs due to spatial autocorrelation in the data.
 

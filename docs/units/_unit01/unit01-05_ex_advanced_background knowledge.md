@@ -1,13 +1,16 @@
 ---
-title: "EX-A | Further background knowledge (optional / advanced)"
+title: "EX | Further background knowledge"
 toc: true
 header:
   image: '/assets/images/teaserimages/felder.png'
   caption: '[Marco Verch via ccnull.de](https://ccnull.de/foto/drohnenaufnahme-von-landwirtschaftlichen-feldern-mit-geometrischen-mustern/1105470). [CC-BY 2.0](https://creativecommons.org/licenses/by/2.0/de/). Image cropped.'
 ---
 
+<!--
 This is an optional exercise intended for advanced course participants.
 {: .notice--warning}
+-->
+
 
 To deepen your understanding of species distribution modeling (SDM) and its associated challenges, read one of the studies listed below. Then, revisit the nature conservation project on the Barbastella bat ([Mopsmap]( https://map.mopsfledermaus.de/mopsmap)) and also review its conservation status [(e.g. on the IUCN Red List]( https://www.iucnredlist.org/)).
 

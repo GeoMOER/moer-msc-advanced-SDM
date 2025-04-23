@@ -13,8 +13,7 @@ Until next session:
 2. Read the selected paper carefully.
 1. Summarize the main topic of the paper in a few sentences (not more than 5!).
 1. Identify and list three to five key pieces of information from the paper.
-1. Upload your summary and key points to ILIAS.
-1. Prepare to present your findings in the next session and participate in a peer discussion and exchange round.
+1. Upload your summary and key points as PDF to ILIAS (not more than 1 Page).
 {% endcapture %}
 <div class="notice--success">
   {{ Assignment-1-1 | markdownify }}

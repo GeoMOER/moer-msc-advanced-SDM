@@ -1,13 +1,14 @@
 ---
-title: EX-A | Advanced visualization (optional / advanced)
+title: EX | Advanced visualization
 toc: true
 header:
   image: '/assets/images/teaserimages/felder.png'
   caption: '[Marco Verch via ccnull.de](https://ccnull.de/foto/drohnenaufnahme-von-landwirtschaftlichen-feldern-mit-geometrischen-mustern/1105470). [CC-BY 2.0](https://creativecommons.org/licenses/by/2.0/de/). Image cropped.'
 ---
-
+<!--
 This is an optional exercise intended for advanced course participants.
 {: .notice--warning}
+-->
 
 ## Advanced visualization in R
 This section offers a practical exercise for those with a solid foundation in spatial data analysis. You will develop an advanced map in R using the [**tidyterra**]( https://dieghernan.github.io/tidyterra/) and [**ggplot2**](https://ggplot2.tidyverse.org/) packages to visualize tick bite distribution across Switzerland. This exercise will guide you through adding visual elements to communicate spatial data insights effectively.

@@ -31,9 +31,13 @@ The HTML learning environment is organized into four distinct modules, each desi
 
 2. **EX (Exercises)**: These are practical sessions where you apply the concepts discussed in the learning material. Through hands-on coding, you’ll create the elements we've covered in theory, reinforcing your understanding and skill.
 
-3. **EX-A (Advanced Exercises)**: These exercises are intended for advanced participants and are optional for bachelor-level students. Given the diverse skill levels of the course participants, these exercises provide additional challenges for those who wish to deepen their knowledge and capabilities.
+3. **A (Assignments)**: These are out-of-class exercises that require you to apply the course material in a more comprehensive way. Assignments are meant to test your understanding and ability to transfer the skills learned in the course. You must upload your completed assignments to ILIAS (unless otherwise stated) by the beginning of the next session.
 
-4. **A (Assignments)**: These are out-of-class exercises that require you to apply the course material in a more comprehensive way. Assignments are meant to test your understanding and ability to transfer the skills learned in the course. You must upload your completed assignments to ILIAS (unless otherwise stated) by the beginning of the next session.
+
+<!--
+3. **EX-A (Advanced Exercises)**: These exercises are intended for advanced participants and are optional for bachelor-level students. Given the diverse skill levels of the course participants, these exercises provide additional challenges for those who wish to deepen their knowledge and capabilities.
+-->
+
 
 
 ## Flexible learning with deadlines
@@ -51,6 +55,6 @@ but the deadlines for submitting your solutions must be met.
 
 Ilias is the course space offered by the University of Marburg. 
 We will use Ilias mainly for the administration of the course and for providing small static documents.
-The link to the Ilias space for this course can be found [here](https://ilias.uni-marburg.de/goto.php?target=crs_3203176){:target="_blank"}.
+The link to the Ilias space for this course can be found [here](https://ilias.uni-marburg.de/goto.php/crs/4304496){:target="_blank"}.
 Note that you have to log in with your student account. 
 There is also a forum in Ilias, which you can use for getting in touch with your fellow students.

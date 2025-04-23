@@ -44,14 +44,14 @@ At the end of this course you should
 
 This course is intended as a blended learning module in our study program although the provided introductions, explanations and examples might be useful for self-study, too.
 
-This course will take place in the classroom (**F 14 | 00A19**). The first session will take place **on Thursday 24.04.2025 at 09:00 am**.
-Course material will be provided in the [Ilias course environment](){:target="_blank"} (only accessible for members of the course who are logged-in into Ilias). 
+This course will take place in the classroom (**F 14 | 00A19**). The first session will take place **on Thursday 24.04.2025 at 09:15 am**.
+Course material will be provided in the [Ilias course environment](https://ilias.uni-marburg.de/goto.php/crs/4304496){:target="_blank"} (only accessible for members of the course who are logged-in into Ilias). 
 {: .notice--info}
 
 
 # Course times
 
-Thursday 09:00 - 11:45.
+Thursday 09:15 - 11:30.
 
 
 # Syllabus
@@ -59,21 +59,21 @@ Thursday 09:00 - 11:45.
 | Session |  Date | Topic                        | Content                                                                          |
 |---------|-------|------------------------------|----------------------------------------------------------------------------------|
 ||| **SDM Basics** ||
-| 01 | 24.04.2025 | SDM basics     | Course introduction, expectations, organisational matters, R, R Studio, R Markdown    |
+| 01 | 24.04.2025 | SDM basics                 | What is SDM, how does it works and why do we need it?                  |
 |  | 01.05.2025 | *Public holiday*     |  *No session today*   |
-| 02 | 08.05.2025 | SDM methods                  | What is SDM, how does it works and why do we need it?                  |
 ||| **SDM workflow**                   |        |
-| 03 | 15.05.2025 |    Prepare some data for SDM  | Overview, conceptualisation, data processing for SDM |
-| 04 | 22.05.2025 |    Train your first model                       | Model fitting, assessment, and predictions |
-|  | 29.05.2025 | *Public holiday*     |  *No session today*   |
+| 02 | 08.05.2025 |    Prepare some data for SDM  | Overview, conceptualisation, data processing for SDM |
+| 03 | 15.05.2025 |    Train your first model                       | Model fitting, assessment, and predictions |
 ||| **Artificial landscapes**                   |        |
-| 05 | 05.06.2025 | Artificial landscapes | Create neutral landscape models |
+| 04 | 22.05.2025 | Artificial landscapes | Create neutral landscape models |
+|  | 29.05.2025 | *Public holiday*     |  *No session today*   |
 ||| **Virtual species**                   |        |
-| 06 | 12.06.2025 | Virtual species | Generate virtual species with different ecological niches|
+| 05 | 05.06.2025 | Virtual species | Generate virtual species with different ecological niches|
+| 06 | 12.06.2025 | Sample presence-absence points                | Create realistic presence-absence data for your virtual species and create training and testing datasets.|
 |  | 19.06.2025 | *Public holiday*     |  *No session today*   |
-| 07 | 26.06.2025 | Sample presence-absence points                | Create realistic presence-absence data for your virtual species and create training and testing datasets.|
 ||| **From idea to insight: Your personal research project** ||
-| 08 | 03.07.2025 | Your research project         | Select your research question and start to work on your project outline. |
+| 07 | 26.06.2025 | Your research project         | Select your research question and start to work on your project outline. |
+| 08 | 03.07.2025  | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
 | 09 | 10.07.2025 | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
 | 10 | 17.07.2025 | **Present your project outline** |  Present project outlines to peers for constructive feedback. |
 ||| **Synthesis**                                ||
