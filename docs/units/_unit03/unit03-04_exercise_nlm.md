@@ -24,7 +24,7 @@ Once completed, you’ll have a comprehensive environmental dataset ready for an
 
 ![image](../assets/images/unit02/NLMs.png)
 
-#### Additional learning material: Multicorrelinarity between environmental variables
+#### Multicorrelinarity between environmental variables
 
 In ecological modeling, researchers frequently incorporate a substantial number of environmental variables. In Species Distribution Modeling the number of variables can easily exceed 100 variables (e.g., [Bald et al. 2024](http://dx.doi.org/10.1002/ece3.11571)). This can quickly lead to a situation in which two or more predictor variables in a model are highly correlated, meaning that they provide redundant information about the variance in the outcome. This phenomenon, known as collinearity, is prevalent in ecological and environmental studies, particularly among interrelated variables such as temperature, precipitation, and humidity.
 

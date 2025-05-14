@@ -62,17 +62,17 @@ Thursday 09:15 - 11:30.
 | 01 | 24.04.2025 | SDM basics                 | What is SDM, how does it works and why do we need it?                  |
 |  | 01.05.2025 | *Public holiday*     |  *No session today*   |
 ||| **SDM workflow**                   |        |
-| 02 | 08.05.2025 |    Prepare some data for SDM  | Overview, conceptualisation, data processing for SDM |
-| 03 | 15.05.2025 |    Train your first model                       | Model fitting, assessment, and predictions |
+| 02 | 08.05.2025 |    Train your first model  | Overview, conceptualisation, data processing and model fitting for SDM | 
 ||| **Artificial landscapes**                   |        |
-| 04 | 22.05.2025 | Artificial landscapes | Create neutral landscape models |
-|  | 29.05.2025 | *Public holiday*     |  *No session today*   |
+|  03 | 15.05.2025 | Artificial landscapes | Create neutral landscape models |
 ||| **Virtual species**                   |        |
-| 05 | 05.06.2025 | Virtual species | Generate virtual species with different ecological niches|
-| 06 | 12.06.2025 | Sample presence-absence points                | Create realistic presence-absence data for your virtual species and create training and testing datasets.|
-|  | 19.06.2025 | *Public holiday*     |  *No session today*   |
+| 04 | 22.05.2025 | Virtual species | Generate virtual species with different ecological niches|
+|  | 29.05.2025 | *Public holiday*     |  *No session today*   |
+| 05 | 05.06.2025 | Sample presence-absence points                | Create realistic presence-absence data for your virtual species and create training and testing datasets.|
 ||| **From idea to insight: Your personal research project** ||
-| 07 | 26.06.2025 | Your research project         | Select your research question and start to work on your project outline. |
+| 06 | 12.06.2025 | Your research project         | Select your research question and start to work on your project outline. |
+|  | 19.06.2025 | *Public holiday*     |  *No session today*   |
+| 07 | 26.06.2025  | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
 | 08 | 03.07.2025  | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
 | 09 | 10.07.2025 | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
 | 10 | 17.07.2025 | **Present your project outline** |  Present project outlines to peers for constructive feedback. |
