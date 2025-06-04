@@ -14,7 +14,7 @@ header:
 Bring it to an end. Therefore
 1. implement the feedback into your outline, 
 2. realize your team project, and
-3. upload your pdf until 30 September 2025 23:59 on ILIAS.
+3. upload your pdf until 31 August 2025 23:59 on ILIAS.
 
 
 
