@@ -75,9 +75,9 @@ Thursday 09:15 - 11:30.
 | 07 | 26.06.2025  | **Present your project outline** |  Present project outlines to peers for constructive feedback. |
 | 08 | 03.07.2025  | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
 | 09 | 10.07.2025 | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
-| 10 | 17.07.2025  | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
 ||| **Synthesis**                                ||
-| 11 | 24.07.2025 | Wrap up                      | Get and give feedback from your peers and instructors, tell us how you self-assess your skills, and happy holidays |
+| 11 | 17.07.2025 | Wrap up                      | Get and give feedback from your peers and instructors, tell us how you self-assess your skills, and happy holidays |
+| 10 | 24.07.2025  | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
 
 
 
