@@ -44,14 +44,14 @@ At the end of this course you should
 
 This course is intended as a blended learning module in our study program although the provided introductions, explanations and examples might be useful for self-study, too.
 
-This course will take place in the classroom (**F 14 | 00A19**). The first session will take place **on Thursday 24.04.2025 at 09:15 am**.
-Course material will be provided in the [Ilias course environment](https://ilias.uni-marburg.de/goto.php/crs/4304496){:target="_blank"} (only accessible for members of the course who are logged-in into Ilias). 
+This course will take place in the classroom (**F 14 | 00A19**). The first session will take place **on Tuesday 14.04.2026 at 09:15 am**.
+Course material will be provided in the [Ilias course environment](){:target="_blank"} (only accessible for members of the course who are logged-in into Ilias). 
 {: .notice--info}
 
 
 # Course times
 
-Thursday 09:15 - 11:30.
+Tuesday 09:15 - 11:45.
 
 
 # Syllabus
@@ -59,26 +59,26 @@ Thursday 09:15 - 11:30.
 | Session |  Date | Topic                        | Content                                                                          |
 |---------|-------|------------------------------|----------------------------------------------------------------------------------|
 ||| **SDM Basics** ||
-| 01 | 24.04.2025 | SDM basics                 | What is SDM, how does it works and why do we need it?                  |
-|  | 01.05.2025 | *Public holiday*     |  *No session today*   |
+| 01 | 14.04.2026 | SDM basics                 | What is SDM, how does it works and why do we need it?                  |
+|  | 21.04.2026 |     |     |
 ||| **SDM workflow**                   |        |
-| 02 | 08.05.2025 |    Train your first model  | Overview, conceptualisation, data processing and model fitting for SDM | 
+| 02 | 28.04.2026 |    Train your first model  | Overview, conceptualisation, data processing and model fitting for SDM | 
 ||| **Artificial landscapes**                   |        |
-|  03 | 15.05.2025 | Artificial landscapes | Create neutral landscape models |
+|  03 | 05.05.2026 | Artificial landscapes | Create neutral landscape models |
 ||| **Virtual species**                   |        |
-| 04 | 22.05.2025 | Virtual species | Generate virtual species with different ecological niches|
-|  | 29.05.2025 | *Public holiday*     |  *No session today*   |
+| 04 | 12.05.2026 | Virtual species | Generate virtual species with different ecological niches|
+|  | 19.05.2026 |     |    |
 ||| **From idea to insight: Your personal research project** ||
-| 05 | 05.06.2025 | Your research project         | Select your research question and start to work on your project outline. |
-| 06 | 12.06.2025 | Your research project         | Select your research question and start to work on your project outline. |
-|  | 19.06.2025 | *Public holiday*     |  *No session today*   |
-| 07 | 26.06.2025  | **Present your project outline** |  Present project outlines to peers for constructive feedback. |
-| 08 | 03.07.2025  | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
-| 09 | 10.07.2025 | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
+| 05 | 26.05.2026 | Your research project         | Select your research question and start to work on your project outline. |
+| 06 | 02.06.2026 | Your research project         | Select your research question and start to work on your project outline. |
+|  | 09.06.2026 |      |    |
+| 07 | 16.06.2026  | **Present your project outline** |  Present project outlines to peers for constructive feedback. |
+| 08 | 23.06.2026  | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
+| 09 | 30.06.2026 | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
+| 10 | 07.07.2026  | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
 ||| **Synthesis**                                ||
-| 11 | 17.07.2025 | Wrap up                      | Get and give feedback from your peers and instructors, tell us how you self-assess your skills, and happy holidays |
-| 10 | 24.07.2025  | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
 
+| 11 | 14.07.2026 | Wrap up                      | Get and give feedback from your peers and instructors, tell us how you self-assess your skills, and happy holidays |
 
 
 

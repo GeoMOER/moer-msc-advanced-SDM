@@ -14,7 +14,7 @@ This is an optional exercise intended for advanced course participants.
 This section offers a practical exercise for those with a solid foundation in spatial data analysis. You will develop an advanced map in R using the [**tidyterra**]( https://dieghernan.github.io/tidyterra/) and [**ggplot2**](https://ggplot2.tidyverse.org/) packages to visualize tick bite distribution across Switzerland. This exercise will guide you through adding visual elements to communicate spatial data insights effectively.
 
 
-Use this time to experiment with advanced plotting in R by creating a map using the [**tidyterra** package]( https://dieghernan.github.io/tidyterra/).
+Use the time to experiment with advanced plotting in R by creating a map using the [**tidyterra** package]( https://dieghernan.github.io/tidyterra/).
 
 To begin, download the tick bite distribution dataset and verify it by creating a basic plot. Use the provided URL to download the tick bite distribution map, then save it to your chosen local directory.
 ```r
