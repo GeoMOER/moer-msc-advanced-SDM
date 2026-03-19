@@ -59,10 +59,10 @@ author:
   avatar           : "/assets/images/instructors/zeuss.jpg"
   bio              : "University of Marburg"
   location         : "Marburg, DE"
-  email            : "dirk.zeuss@uni-marburg.de"
-  uri              : "https://www.uni-marburg.de/en/fb19/disciplines/physisch/environmentalinformatics"
-  home             : "https://www.researchgate.net/profile/Dirk_Zeuss"
-  researchgate     : "https://www.researchgate.net/profile/Dirk_Zeuss/stats" # to be included some day
+  email            : "lisa.bald@uni-marburg.de"
+  uri              : "https://www.uni-marburg.de/en/fb19/disciplines/physisch/environmentalinformatics/team/lisa-bald"
+  home             : "https://www.researchgate.net/profile/Lisa-Bald"
+  researchgate     : "https://www.researchgate.net/profile/Lisa-Bald" # to be included some day
   #flickr           : "https://www.flickr.com/environmentalinformatics-marburg/"
   github           : "GeoMOER"
   #twitter          : "https://twitter.com/geographie_umr"
@@ -112,9 +112,12 @@ collections:
   unit06:
     output: true
     permalink: /:collection/:title.html
-#  unit07:
-#    output: true
-#    permalink: /:collection/:title.html
+  unit07:
+    output: true
+    permalink: /:collection/:title.html
+  unit08:
+    output: true
+    permalink: /:collection/:title.html    
   unit99:
     output: true
     permalink: /:collection/:title.html
@@ -142,7 +145,7 @@ defaults:
       path: ""
       type: unit01
     values:
-      category: "01 SDM basics"
+      category: "01 Basics"
       tags: "Unit 01"
       layout: single
       sidebar:
@@ -152,38 +155,68 @@ defaults:
       path: ""
       type: unit02
     values:
-      category: "02 SDM workflow"
+      category: "02 SDM Basics"
       tags: "Unit 02"
       layout: single
       sidebar:
         nav: "course_unit"         
-  # unit02
+ # unit03
   - scope:
       path: ""
       type: unit03
     values:
-      category: "03 Artificial landscapes"
+      category: "03 SDM workflow"
       tags: "Unit 03"
       layout: single
       sidebar:
         nav: "course_unit" 
- # unit02
+ # unit04
   - scope:
       path: ""
       type: unit04
     values:
-      category: "04 Virtual species"
+      category: "04 SDM evaluation metrics"
       tags: "Unit 04"
       layout: single
       sidebar:
-        nav: "course_unit"         
-  # unit03
+        nav: "course_unit"  
+ # unit05
   - scope:
       path: ""
       type: unit05
     values:
-      category: "05 Your research project"
+      category: "05 Exkurs: SDM with audio data"
       tags: "Unit 05"
+      layout: single
+      sidebar:
+        nav: "course_unit"         
+  # unit06
+  - scope:
+      path: ""
+      type: unit06
+    values:
+      category: "06 Artificial landscapes"
+      tags: "Unit 06"
+      layout: single
+      sidebar:
+        nav: "course_unit" 
+ # unit07
+  - scope:
+      path: ""
+      type: unit07
+    values:
+      category: "07 Virtual species"
+      tags: "Unit 07"
+      layout: single
+      sidebar:
+        nav: "course_unit"         
+  # unit08
+  - scope:
+      path: ""
+      type: unit08
+    values:
+      category: "08 Your research project"
+      tags: "Unit 08"
       layout: single
       sidebar:
         nav: "course_unit" 

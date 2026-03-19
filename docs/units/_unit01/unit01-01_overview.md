@@ -17,5 +17,5 @@ At the end of this unit you should be able to
 * tell the difference between an R and an R markdown script,
 * create R and R markdown scripts and run and compile them,
 * understand basic ecological concepts like biotic interaction, niche breath and dispersal,
-* be able to explain what species distirbution modeling is and how it can help to tackle the biodiversity crisis.
+* be able to explain what species distribution modeling is and how it can help to tackle the biodiversity crisis.
 

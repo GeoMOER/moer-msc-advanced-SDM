@@ -27,6 +27,3 @@ The online resources for working with **vector data** can be found [here]( https
 The online resources for working with **raster data** can be found [here]( https://geomoer.github.io/moer-bsc-project-seminar-SDM/unit03/unit03-03_raster_data.html){:target="_blank"}.
 
 Also work through the **example workflow**, which can be found [here]( https://geomoer.github.io/moer-bsc-project-seminar-SDM/unit03/unit03-05_example_SpatialDataProcessing.html){:target="_blank"}.
-
-## Already a spatial data expert in R?
-Fantastic! Since you’re already familiar with the basics of spatial data in R, please consider assisting your peers with questions or code debugging as they work through the foundational exercises. If you still have time, explore advanced data visualization. There are many ways and many packages to do this here we will use the [**tidyterra** package]( https://dieghernan.github.io/tidyterra/). You can explore this in the optional exercise on the next page.
