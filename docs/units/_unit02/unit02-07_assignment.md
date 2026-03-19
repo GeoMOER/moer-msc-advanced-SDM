@@ -1,17 +1,17 @@
 ---
-title: "A | Assignment: 01" 
-published: false
+title: "A | Assignment: 02" 
+published: true
 toc: true
 header:
-  image: '/assets/images/teaserimages/felder.png'
-  caption: '[Marco Verch via ccnull.de](https://ccnull.de/foto/drohnenaufnahme-von-landwirtschaftlichen-feldern-mit-geometrischen-mustern/1105470). [CC-BY 2.0](https://creativecommons.org/licenses/by/2.0/de/). Image cropped.'
+  image: '/assets/images/teaserimages/Gemini_Generated_Image_lake_cropped.png'
+  caption: 'Generated with Google Gemini'
 ---
 
 {% capture Assignment-1-1 %}
 Until next session: 
 
 1. Select one paper from the list provided below.
-2. Read the selected paper carefully.
+1. Read the selected paper carefully.
 1. Summarize the main topic of the paper in a few sentences (not more than 5!).
 1. Identify and list three to five key pieces of information from the paper.
 1. Upload your summary and key points as PDF to ILIAS (not more than 1 Page).

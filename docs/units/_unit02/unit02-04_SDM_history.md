@@ -3,8 +3,8 @@ title: EX | A short history of SDM
 toc: true
 published: true
 header:
-  image: '/assets/images/teaserimages/felder.png'
-  caption: '[Marco Verch via ccnull.de](https://ccnull.de/foto/drohnenaufnahme-von-landwirtschaftlichen-feldern-mit-geometrischen-mustern/1105470). [CC-BY 2.0](https://creativecommons.org/licenses/by/2.0/de/). Image cropped.'
+  image: '/assets/images/teaserimages/Gemini_Generated_Image_lake_cropped.png'
+  caption: 'Generated with Google Gemini'
 ---
 
 # The Methodological Evolution of SDM (1980–Present)
@@ -50,3 +50,6 @@ In this section, you are the researcher. You must identify the "Key Milestones" 
 * **Primary Literature:** * *Guisan & Zimmermann (2000)* - "Predictive habitat distribution models in ecology."
     * *Elith et al. (2006)* - "Novel methods improve prediction of species’ distributions from occurrence data."
 * **Software History:** * Review the documentation history of the `dismo` and `biomod2` R packages.
+
+
+<div class="padlet-slideshow-embed" style="width:480px;height:320px;"><p style="padding:0;margin:0;width:100%;height:100%"><iframe src="https://padlet.com/embed/si06tarsegpaqe9x/slideshow?autoplay=1&loop=1&duration=3" frameborder="0" allow="clipboard-write" style="width:100%;height:100%;display:block;padding:0;margin:0"></iframe></p></div>
