@@ -68,7 +68,7 @@ Valavi, R., Guillera‐Arroita, G., Lahoz‐Monfort, J. J., & Elith, J. (2022). 
 ### Exercise
 
 #### **1. Selection**
-Select **three distinct algorithms** (e.g., MaxEnt, Random Forest, GLM). Coordinate with the group to minimize redundancy.
+Select **three distinct algorithms** (e.g., MaxEnt, Random Forest, GLM) form the student tutorials on the next page. Coordinate with the group to minimize redundancy.
 
 #### **2. Research**
 Analyze your models individually and try to understand it as good as possible. Look out for example for:
