@@ -1,6 +1,14 @@
 
 # /_data/authors.yml
 
+- bald:
+  name             : "Lisa Bald"
+  avatar           : "/assets/images/authors/bald.jpg"
+  email            : "lisa.bald@geo.uni-marburg.de"
+  home             : "https://www.uni-marburg.de/de/fb19/forschung/fachgebiete-und-arbeitsgruppen/umweltinformatik/team/lisa-bald"
+  bio              : "Philipps-Universität Marburg"
+  location         : "Marburg, DE"
+  uri              : "https://www.uni-marburg.de/de/fb19/disciplines/physisch/umweltinformatik"
 
 - zeuss:
   name             : "Dirk Zeuss"
@@ -9,12 +17,4 @@
   bio              : "Philipps-Universität Marburg"
   location         : "Marburg, DE"
   home             : "https://www.uni-marburg.de/de/fb19/fachbereich/staff/dirk-zeuss"
-  uri              : "https://www.uni-marburg.de/de/fb19/disciplines/physisch/umweltinformatik"
-- bald:
-  name             : "Lisa Bald"
-  avatar           : "/assets/images/authors/bald.jpg"
-  email            : "lisa.bald@geo.uni-marburg.de"
-  home             : "https://www.uni-marburg.de/de/fb19/disciplines/physisch/umweltinformatik"
-  bio              : "Philipps-Universität Marburg"
-  location         : "Marburg, DE"
   uri              : "https://www.uni-marburg.de/de/fb19/disciplines/physisch/umweltinformatik"

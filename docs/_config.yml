@@ -37,7 +37,20 @@ description: >- # this means to ignore newlines until next item
 ##### Social Sharing ##########################################################
 #twitter:
   #username         : &twitter "EnvIn_UMR"
-
+##### Lecturer settings #######################################################
+author:
+  name             : "Lisa Bald"
+  avatar           : "/assets/images/instructors/zeuss.jpg"
+  bio              : "University of Marburg"
+  location         : "Marburg, DE"
+  email            : "lisa.bald@uni-marburg.de"
+  uri              : "https://www.uni-marburg.de/en/fb19/disciplines/physisch/environmentalinformatics/team/lisa-bald"
+  home             : "https://www.researchgate.net/profile/Lisa-Bald"
+  researchgate     : "https://www.researchgate.net/profile/Lisa-Bald" # to be included some day
+  #flickr           : "https://www.flickr.com/environmentalinformatics-marburg/"
+  github           : "GeoMOER"
+  #twitter          : "https://twitter.com/geographie_umr"
+  #youtube          : "https://www.youtube.com/channel/UCGiwSv5KYjsNXl6-nZq0SDA"
 ##### Lecturer settings #######################################################
 author:
   name             : "Dirk Zeuss"
@@ -53,21 +66,6 @@ author:
   #twitter          : "https://twitter.com/geographie_umr"
   #youtube          : "https://www.youtube.com/channel/UCGiwSv5KYjsNXl6-nZq0SDA"
   
-  ##### Lecturer settings #######################################################
-author:
-  name             : "Lisa Bald"
-  avatar           : "/assets/images/instructors/zeuss.jpg"
-  bio              : "University of Marburg"
-  location         : "Marburg, DE"
-  email            : "lisa.bald@uni-marburg.de"
-  uri              : "https://www.uni-marburg.de/en/fb19/disciplines/physisch/environmentalinformatics/team/lisa-bald"
-  home             : "https://www.researchgate.net/profile/Lisa-Bald"
-  researchgate     : "https://www.researchgate.net/profile/Lisa-Bald" # to be included some day
-  #flickr           : "https://www.flickr.com/environmentalinformatics-marburg/"
-  github           : "GeoMOER"
-  #twitter          : "https://twitter.com/geographie_umr"
-  #youtube          : "https://www.youtube.com/channel/UCGiwSv5KYjsNXl6-nZq0SDA"
-
 
 ##### Site configuration ######################################################
 title_separator: "|"
@@ -185,7 +183,7 @@ defaults:
       path: ""
       type: unit05
     values:
-      category: "05 Exkurs: SDM with audio data"
+      category: "05 Exkurs: Integrating Acoustic Data into SDM"
       tags: "Unit 05"
       layout: single
       sidebar:
