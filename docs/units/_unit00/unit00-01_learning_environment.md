@@ -55,6 +55,6 @@ but the deadlines for submitting your solutions must be met.
 
 Ilias is the course space offered by the University of Marburg. 
 We will use Ilias mainly for the administration of the course and for providing small static documents.
-The link to the Ilias space for this course can be found [here](https://ilias.uni-marburg.de/goto.php/crs/4304496){:target="_blank"}.
+The link to the Ilias space for this course can be found [here](https://ilias.uni-marburg.de/goto.php/crs/4559057){:target="_blank"}.
 Note that you have to log in with your student account. 
 There is also a forum in Ilias, which you can use for getting in touch with your fellow students.

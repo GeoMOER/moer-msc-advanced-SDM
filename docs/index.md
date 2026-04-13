@@ -45,7 +45,7 @@ At the end of this course you should
 This course is intended as a blended learning module in our study program although the provided introductions, explanations and examples might be useful for self-study, too.
 
 This course will take place in the classroom (**F 14 | 00A19**). The first session will take place **on Tuesday 14.04.2026 at 09:15 am**.
-Course material will be provided in the [Ilias course environment](){:target="_blank"} (only accessible for members of the course who are logged-in into Ilias). 
+Course material will be provided in the [Ilias course environment](https://ilias.uni-marburg.de/goto.php/crs/4559057){:target="_blank"} (only accessible for members of the course who are logged-in into Ilias).
 {: .notice--info}
 
 
