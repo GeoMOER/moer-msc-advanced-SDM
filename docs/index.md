@@ -59,26 +59,26 @@ Tuesday 09:15 - 11:15.
 | Session |  Date | Topic                        | Content                                                                          |
 |---------|-------|------------------------------|----------------------------------------------------------------------------------|
 ||| **Basics** ||
-| 01 | 14.04.2026 | Basics                 |   Welcome, R, spatial data in R, Git, Github               |
+| 01 | 14.04.2026 | Basics                 |   Welcome, R, spatial data in R, Git, Github        |
+| 02 | ~~21.04.2026~~ | Canceled   |      |
 ||| **SDM Basics** ||
-| 02 | 21.04.2026 | A short history of SDM   |   How did SDM evolve? Where are we now?    |
+| 03 | 28.04.2026 | A short history of SDM   |   How did SDM evolve? Where are we now?    |
 ||| **SDM workflow**                   |        |
-| 03 | 28.04.2026  |    Train your first model  | Overview, conceptualisation, data processing and model fitting for SDM |
+| 04 | 05.05.2026  |    Train your first model  | Overview, conceptualisation, data processing and model fitting for SDM |
 ||| **SDM evaluation metrics**                   |        | 
-| 04 | 05.05.2026 |    Model evaluation  | What do we know about calculation and accuracy of evaluation metrics? | 
+| 05 | 12.05.2026 |    Model evaluation  | What do we know about calculation and accuracy of evaluation metrics? | 
 ||| **Exkurs: SDM with audio data**                   |        | 
-| 05 | 12.05.2026 |     |  | 
+| 06 | 19.05.2026 |     |  | 
 ||| **Artificial landscapes**                   |        |
-|  06 | 19.05.2026 | Artificial landscapes | Create neutral landscape models |
+|  07 | 26.05.2026 | Artificial landscapes | Create neutral landscape models |
 ||| **Virtual species**                   |        |
-| 07 | 26.05.2026 | Virtual species | Generate virtual species with different ecological niches|
+| 08 | 02.06.2026 | Virtual species | Generate virtual species with different ecological niches|
 ||| **From idea to insight: Your personal research project** ||
-| 08 | 02.06.2026 | Your research project         | Select your research question and start to work on your project outline. |
-| 09 | 09.06.2026  | **Present your project outline** |  Present project outlines to peers for constructive feedback. |
-|  10| 16.06.2026 |   Free working session   | No input in this session.   |
-| 11 | 23.06.2026  | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
-| 12 | 30.06.2026 | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
-| 13 | 07.07.2026  | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
+| 09 | 09.06.2026 | Your research project         | Select your research question and start to work on your project outline. |
+| 10 | 16.06.2026  | **Present your project outline** |  Present project outlines to peers for constructive feedback. |
+|  11| 23.06.2026 |   Free working session   | No input in this session.   |
+| 12 | 30.06.2026  | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
+| 13 | 07.07.2026 | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
 ||| **Synthesis**                                ||
 
 | 14 | 14.07.2026 | Wrap up                      | Get and give feedback from your peers and instructors, tell us how you self-assess your skills, and happy holidays |
