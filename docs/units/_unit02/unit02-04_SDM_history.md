@@ -26,7 +26,7 @@ Th link to the padlet is on ILIAS.
 
 #### The Live Timeline
 
-
+<!--
 <div class="padlet-slideshow-embed" style="width:100%;height:600px;border:1px solid #e2e2e2;border-radius:8px;">
     <iframe src="https://padlet.com/embed/si06tarsegpaqe9x" 
             frameborder="0" 
@@ -34,3 +34,5 @@ Th link to the padlet is on ILIAS.
             style="width:100%;height:100%;display:block;padding:0;margin:0">
     </iframe>
 </div>
+
+-->
