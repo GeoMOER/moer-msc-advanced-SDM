@@ -14,18 +14,12 @@ header:
 In the field of Species Distribution Modeling, we generally distinguish between two fundamental frameworks: correlative and mechanistic models. While both approaches aim to predict the spatial occurrence of a species, they rely on entirely different sets of assumptions and data types to reach their conclusions.
 
 #### **Mechanistic Models**
-Mechanistic models, often referred to as process-based models, focus on the causal biological forces that allow an organism to persist in a given environment. Rather than observing where a species currently lives, these models calculate where a species *could* live by simulating the biophysical exchange between the organism and its surroundings. This approach utilizes functional traits to model specific constraints such as metabolic rates, water loss, and thermal tolerance limits like $T_{max}$ and $T_{min}$. The data required for these models is typically high-resolution and derived from controlled laboratory experiments, such as respirometry or heat-tolerance trials. Because they are rooted in the fundamental physiology of the species, mechanistic models are exceptionally powerful for predicting distributions in "no-analog" future climates or identifying the invasive potential of species in entirely new continents where historical spatial correlations do not yet exist. However, the primary risk of this approach is its extreme data intensity; for the vast majority of the world's taxa, the detailed physiological parameters required for a robust model are simply unavailable.
+Mechanistic models, often referred to as process-based models, focus on the causal biological forces that allow an organism to persist in a given environment. Rather than observing where a species currently lives, these models calculate where a species *could* live by simulating the biophysical exchange between the organism and its surroundings. This approach utilizes functional traits to model specific constraints such as metabolic rates, water loss, and thermal tolerance limits like minimum temperature and maximum temperature. The data required for these models is typically high-resolution and derived from controlled laboratory experiments, such as respirometry or heat-tolerance trials. Because they are rooted in the fundamental physiology of the species, mechanistic models are exceptionally powerful for predicting distributions in "no-analog" future climates or identifying the invasive potential of species in entirely new continents where historical spatial correlations do not yet exist. However, the primary risk of this approach is its extreme data intensity; for the vast majority of the world's taxa, the detailed physiological parameters required for a robust model are simply unavailable.
 
 #### **Correlative (Niche) Models**
 Correlative models represent the primary focus of most modern SDM applications and rely heavily on statistical associations. The underlying logic assumes that the environmental conditions present at the locations where a species is currently observed accurately represent its ecological requirements. These models use "occurrence-environment" correlations to define habitat suitability; for example, if a species is consistently found in areas with high annual rainfall and specific temperature ranges, the model identifies that environmental envelope as suitable habitat. The data requirements are relatively straightforward, consisting of occurrence points from databases like GBIF and environmental GIS layers such as WorldClim or CHELSA. Correlative models are best suited for large-scale mapping across thousands of species and for rapid conservation assessments. Their main limitation lies in extrapolation; because the model does not understand the physiological "why" behind an observation, it may fail to provide accurate predictions when projected into future climate scenarios that have no modern equivalent.
 
 ---
-
-#### References
-
-Kearney, M., & Porter, W. (**2009**). Mechanistic niche modelling: Combining physiological and spatial data to predict species’ ranges. *Ecology Letters*, 12(4), 334–350. [https://doi.org/10.1111/j.1461-0248.2008.01277.x](https://doi.org/10.1111/j.1461-0248.2008.01277.x) 
-
-Jarnevich, C. S., Stohlgren, T. J., Kumar, S., Morisette, J. T., & Holcombe, T. R. (**2015**). Caveats for correlative species distribution modeling. *Ecological Informatics*, 29, 6–15. [https://doi.org/10.1016/j.ecoinf.2015.06.007](https://doi.org/10.1016/j.ecoinf.2015.06.007) 
 
 ### Machine Learning in SDM
 
@@ -68,16 +62,26 @@ Valavi, R., Guillera‐Arroita, G., Lahoz‐Monfort, J. J., & Elith, J. (2022). 
 ### Exercise
 
 #### **1. Selection**
-Select **three distinct algorithms** (e.g., MaxEnt, Random Forest, GLM) form the student tutorials on the next page. Coordinate with the group to minimize redundancy.
+Select **one of the algorithms** (e.g., MaxEnt, Random Forest, GLM) form the student tutorials on the next page. Coordinate with the group to minimize redundancy.
 
-#### **2. Research**
-Analyze your models individually and try to understand it as good as possible. Look out for example for:
+#### **2. Research** 
+Analyze your modeling algorithms individually and try to understand it as good as possible. Look out for example for:
 * Does it require Presence-Only, Presence-Absence, or Background data?
 * How does it handle non-linear relationships or interactions?
 * What are the known pitfalls (e.g., over-fitting, sensitivity to noise)?
 
 #### **3. Pair**
-Form grous of two people and explain your respective peer your model algorithm.
+Form grous of two (or three) people and explain your respective peer your model algorithm.
 
 #### **4. Share**
 We will reconvene as a full group to discuss the findings from each pair.
+
+
+
+#### References
+
+Kearney, M., & Porter, W. (**2009**). Mechanistic niche modelling: Combining physiological and spatial data to predict species’ ranges. *Ecology Letters*, 12(4), 334–350. [https://doi.org/10.1111/j.1461-0248.2008.01277.x](https://doi.org/10.1111/j.1461-0248.2008.01277.x) 
+
+Jarnevich, C. S., Stohlgren, T. J., Kumar, S., Morisette, J. T., & Holcombe, T. R. (**2015**). Caveats for correlative species distribution modeling. *Ecological Informatics*, 29, 6–15. [https://doi.org/10.1016/j.ecoinf.2015.06.007](https://doi.org/10.1016/j.ecoinf.2015.06.007) 
+
+Valavi, R., Guillera‐Arroita, G., Lahoz‐Monfort, J. J., & Elith, J. (2022). Predictive performance of presence‐only species distribution models: A benchmark study with reproducible code. *Ecological Monographs*, 92(1). [https://doi.org/10.1002/ecm.1486](https://doi.org/10.1002/ecm.1486)  ([CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)

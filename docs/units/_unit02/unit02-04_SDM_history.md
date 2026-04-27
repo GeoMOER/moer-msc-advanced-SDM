@@ -19,12 +19,11 @@ In this section, we will collectively build a timeline of the evolution of Speci
 #### **Instructions:**
 1. **Coordinate** with your peers and split who wants to research what. Communicate if someone finds something that could be relevant for a different milestone. Try to fill in information for as many milestones as possible.
 2. **Try to find** important authors, exact years, or publications for the milestones and write them in the Padlet. 
-3. **You can also create** a new post on the Padlet if you find a milestone that is not yet in the timeline.
+3. **Create** a new post on the Padlet for milestones that are not yet in the timeline.
 4. **Add why** something had been a game changer in the field.
 
-Th link to the padlet is on ILIAS.
+The link to the padlet is on ILIAS.
 
-#### The Live Timeline
 
 <!--
 <div class="padlet-slideshow-embed" style="width:100%;height:600px;border:1px solid #e2e2e2;border-radius:8px;">
