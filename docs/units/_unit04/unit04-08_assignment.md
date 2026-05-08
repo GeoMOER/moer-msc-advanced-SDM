@@ -1,5 +1,6 @@
 ---
 title: "A | Assignment: 02 🚧"
+published: false
 header:
   image: '/assets/images/teaserimages/Gemini_Generated_Image_cropped.png'
   caption: 'Generated with Google Gemini'

@@ -12,14 +12,15 @@ This is an optional exercise intended for advanced course participants.
 -->
 
 
-In the last session, you learned how to evaluate your species distribution model by separating the data into training, validation, and testing datasets. We did this by randomly splitting the data, a well-established method in machine learning. However, when working with spatial data, this method has limitations. Traditional validation approaches, such as random cross-validation, may not be suitable for SDMs due to spatial autocorrelation in the data.
+In the last exercise, you learned how to evaluate your species distribution model by separating the data into training, validation, and testing datasets. We did this by randomly splitting the data, a well-established method in machine learning. However, when working with spatial data, this method has limitations. Traditional validation approaches, such as random cross-validation, may not be suitable for SDMs due to spatial autocorrelation in the data.
 
 ## Spatial autocorrelation
 Spatial autocorrelation refers to the tendency of nearby locations to have similar environmental conditions. When spatial autocorrelation is present, data points close to each other are not truly independent, which can lead to inflated model performance estimates if not accounted for. Standard cross-validation approaches assume independence between training, validation, and testing data, which is often violated when data is separated randomly. Ignoring spatial autocorrelation can result in models that perform well in training but fail to generalize to new locations.
 Therefore, we need to account for spatial autocorrelation during model evaluation. Spatial validation techniques can help mitigate these biases by structuring data partitions in ways that reduce spatial dependence between training and testing sets. In spatial cross-validation the training, validation and test datasets get separated spatially instead of randomly. Which means points that are closer together in space will be in the same cross-validation fold. Several R packages, such as the `blockCV` package by [Valavi et al. (2019)](https://doi.org/10.1111/2041-210X.13107), facilitate spatial cross-validation tasks. The figure below illustrates the difference between random and spatially separated folds.
 
 [![](https://onlinelibrary.wiley.com/cms/asset/51b7381f-4ac7-4a64-9870-b492e6fca0ec/ece310635-fig-0002-m.jpg)](http://dx.doi.org/10.1002/ece3.10635)
-**Figure:** *(a) The presence-only and presence-absence datasets are clustered closely together, showing no spatial independence. (b) The presence-only data points are divided into spatial blocks, ensuring that the test dataset is spatially independent.*
+
+**Figure:** *(a) The presence-only and presence-absence datasets are clustered closely together, showing no spatial independence. (b) The presence-only data points are divided into spatial blocks, ensuring that the test dataset is spatially independent. [Bald et al. 2023](http://dx.doi.org/10.1002/ece3.10635)*
 
 
 ## Spatial cross-validation techniques
