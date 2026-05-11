@@ -65,10 +65,10 @@ Tuesday 09:15 - 11:15.
 | 03 | 28.04.2026 | A short history of SDM   |   How did SDM evolve? Where are we now?    |
 ||| **SDM workflow**                   |        |
 | 04 | 05.05.2026  |    Train your first model  | Overview, conceptualisation, data processing and model fitting for SDM |
-||| **SDM evaluation metrics**                   |        | 
-| 05 | 12.05.2026 |    Model evaluation  | What do we know about calculation and accuracy of evaluation metrics? | 
 ||| **Exkurs: SDM with audio data**                   |        | 
-| 06 | 19.05.2026 |     |  | 
+| 05 | 12.05.2026 |  Train a spatio-temporal model   | What are the challenges of data captured by ARUs? | 
+||| **SDM evaluation metrics**                   |        | 
+| 06 | 19.05.2026 |   Model evaluation  | What do we know about calculation and accuracy of evaluation metrics? |  
 ||| **Artificial landscapes**                   |        |
 |  07 | 26.05.2026 | Artificial landscapes | Create neutral landscape models |
 ||| **Virtual species**                   |        |

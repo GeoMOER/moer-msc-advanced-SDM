@@ -608,14 +608,3 @@ sf::write_sf(data, "data/trainingData.gpkg")
 
 ```
 
----
-
-### References (Work in Progress)
-**Darras, K., et al.** (2019). Sampling birds with combined hygrometers and acoustic recorders. *Scientific Reports*.
-**Shonfield, J., & Bayne, E. M.** (2017). Autonomous recording units in avian ecological research: current use and future applications. *The Condor*.
-
-
-- Mapping the calling probability of common 
-
-- seasonal accoustic patterns of birds in germany: https://link.springer.com/article/10.1007/s10336-025-02307-y
-

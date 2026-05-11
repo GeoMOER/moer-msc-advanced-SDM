@@ -173,7 +173,7 @@ defaults:
       path: ""
       type: unit04
     values:
-      category: "04 SDM evaluation metrics"
+      category: "04 Exkurs: Integrating Acoustic Data into SDM"
       tags: "Unit 04"
       layout: single
       sidebar:
@@ -183,7 +183,7 @@ defaults:
       path: ""
       type: unit05
     values:
-      category: "05 Exkurs: Integrating Acoustic Data into SDM"
+      category: "05 SDM evaluation metrics"
       tags: "Unit 05"
       layout: single
       sidebar:

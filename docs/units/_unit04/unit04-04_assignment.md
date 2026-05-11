@@ -1,5 +1,5 @@
 ---
-title: "EX | Assignment 05"
+title: "EX | Assignment 04"
 header:
   image: '/assets/images/teaserimages/gemini_audio.png'
   caption: 'Generated with Google Gemini'
