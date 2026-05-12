@@ -1,6 +1,6 @@
 ---
 title: "LM | Presence-only SDM model evaluation 🚧"
-published: false
+published: true
 header:
   image: '/assets/images/teaserimages/Gemini_Generated_Image_cropped.png'
   caption: 'Generated with Google Gemini'

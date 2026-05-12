@@ -40,12 +40,7 @@ To predict species distrbution or calling probability from acoustic data, detect
 Using the provided script below, we download monthly grids for the year 2026, covering variables such as **precipitation, air temperature, and solar radiation**. These grids are cropped to the federal state of Hesse and processed at a spatial resolution of 1 km. This alignment allows us to correlate specific acoustic activity with the localized weather conditions present at each recording station.
 
 ```r
-# DWD CDC monthly grids (Germany) -> cropped to Hessen + photoperiod predictors
-# Script created with Cursor
-# Data: https://opendata.dwd.de/climate_environment/CDC/grids_germany/monthly/
-# Run from the project root or set PROJECT_ROOT.
-# Requires: terra, sf, geosphere, geodata
-
+# DWD HYRAS Daily Processing (2026 v6-1 only)
 suppressPackageStartupMessages({
   library(terra)
   library(sf)
@@ -53,354 +48,95 @@ suppressPackageStartupMessages({
   library(geodata)
 })
 
-# ---- user configuration ------------------------------------------------------
-
+# ---- Configuration -----------------------------------------------------------
 project_root <- "C:/Users/bald_local/DATA/Lehre/moer-msc-advanced-SDM/data/aSDM/"
-#project_root <- Sys.getenv("PROJECT_ROOT", unset = normalizePath(getwd(), winslash = "/"))
+start_date   <- as.Date("2026-03-22")
+end_date     <- as.Date("2026-04-24")
 
-years <- c(2026L)
-
-base_url <- "https://opendata.dwd.de/climate_environment/CDC/grids_germany/monthly"
-
-out_dir_raw <- file.path(project_root, "data", "dwd_raw")
-out_dir_hessen <- file.path(project_root, "data", "dwd_hessen")
-
-reference_product <- "air_temperature_mean"
-
-skip_existing_downloads <- TRUE
-overwrite_outputs <- FALSE
-
-hessen_name_pattern <- "hess"
-
-# Optional: subset of dwd_products$folder to process (NULL = all rows in dwd_products)
-product_folders <- NULL
-ev <- Sys.getenv("DWD_PRODUCT_FOLDERS", "")
-if (nzchar(ev)) {
-  product_folders <- trimws(strsplit(ev, ",", fixed = TRUE)[[1]])
-}
-
-# layout:
-#    nested     — product/MM_Mon/grids_germany_monthly_<prefix>_YYYYMM.asc.gz
-#    flat_asc   — product/grids_germany_monthly_<prefix>_YYYYMM.asc.gz
-#    flat_zip   — product/grids_germany_monthly_<prefix>_YYYYMM.zip (ASCII grid inside)
-dwd_products <- data.frame(
-  folder = c(
-    "air_temperature_mean", "air_temperature_max", "air_temperature_min",
-    "precipitation", "radiation_global"
-  ),
-  prefix = c(
-    "air_temp_mean", "air_temp_max", "air_temp_min",
-    "precipitation","radiation_global"
-  ),
-  layout = c(
-    "nested", "nested", "nested",
-    "nested",    "flat_zip"
-  ),
-  stringsAsFactors = FALSE
-)
-
-options(timeout = max(600, getOption("timeout")))
-
-# DHDN / 3-degree Gauss-Kruger zone 3 — used by many DWD CDC Germany grids when
-# CRS metadata is missing after reading (e.g. /vsigzip/ ASCII).
-default_dwd_crs <- "EPSG:31467"
-
-# ---- helpers ----------------------------------------------------------------
-
-ensure_dwd_crs <- function(r) {
-  cr <- crs(r)
-  if (is.na(cr) || !nzchar(trimws(as.character(cr)))) {
-    crs(r) <- default_dwd_crs
-  }
-  r
-}
-
-# Some DWD products (e.g. radiation *.zip) prepend metadata before the NCOLS line.
-read_ascii_strip_to_temp <- function(path) {
-  lines <- if (grepl("\\.gz$", path, ignore.case = TRUE)) {
-    con <- gzfile(path, "rt")
-    on.exit(close(con), add = TRUE)
-    readLines(con, warn = FALSE)
-  } else {
-    readLines(path, warn = FALSE)
-  }
-  i <- grep("^\\s*ncols\\b", lines, ignore.case = TRUE)[1]
-  if (is.na(i)) {
-    stop("No NCOLS line in ASCII grid: ", path)
-  }
-  tmp <- tempfile(fileext = ".asc")
-  writeLines(lines[i:length(lines)], tmp)
-  tmp
-}
-
-# Load ASCII into an in-memory SpatRaster so temp files can be deleted (terra keeps
-# lazy file references otherwise).
-rast_from_temp_asc <- function(tmp_path) {
-  r <- rast(tmp_path)
-  w <- wrap(r)
-  unlink(tmp_path)
-  terra::unwrap(w)
-}
-
-join_url <- function(...) {
-  parts <- unlist(list(...))
-  parts <- gsub("//+", "/", paste(parts, collapse = "/"))
-  gsub("https:/", "https://", parts, fixed = TRUE)
-}
-
-month_subdir <- function(month) {
-  sprintf("%02d_%s", month, month.abb[month])
-}
-
-ym <- function(year, month) {
-  sprintf("%04d%02d", as.integer(year), as.integer(month))
-}
-
-years <- sort(unique(as.integer(years)))
-
-if (length(product_folders)) {
-  want <- unique(c(reference_product, product_folders))
-  dwd_products <- dwd_products[dwd_products$folder %in% want, , drop = FALSE]
-  if (!nrow(dwd_products)) {
-    stop("product_folders did not match any rows in dwd_products.")
-  }
-}
-
-load_hessen_sf <- function() {
-  de <- gadm(country = "DEU", level = 1, path = tempdir(), version = "latest")
-  nm <- try(de$NAME_1, silent = TRUE)
-  if (inherits(nm, "try-error") || is.null(nm)) {
-    nm <- de[[grep("^NAME", names(de), value = TRUE)[1]]]
-  }
-  i <- grepl(hessen_name_pattern, as.character(nm), ignore.case = TRUE)
-  if (!any(i)) {
-    stop("Could not find Hessen in GADM level-1 (DEU). Check hessen_name_pattern.")
-  }
-  st_as_sf(de[i, ])
-}
-
-rast_from_gz_ascii <- function(gz_path) {
-  tmp <- read_ascii_strip_to_temp(gz_path)
-  rast_from_temp_asc(tmp)
-}
-
-rast_from_zip_ascii <- function(zip_path) {
-  td <- tempfile("dwd_unzip_")
-  dir.create(td, showWarnings = FALSE, recursive = TRUE)
-  utils::unzip(zip_path, exdir = td)
-  asc <- list.files(td, pattern = "\\.[Aa][Ss][Cc]$", full.names = TRUE)
-  if (!length(asc)) {
-    asc <- list.files(td, pattern = "\\.[Gg][Rr][Dd]$", full.names = TRUE)
-  }
-  if (!length(asc)) {
-    unlink(td, recursive = TRUE)
-    stop("No .asc/.grd found in zip: ", zip_path)
-  }
-  if (length(asc) > 1) {
-    warning("Multiple rasters in zip, using first: ", basename(asc[1]))
-  }
-  tmp <- read_ascii_strip_to_temp(asc[1])
-  unlink(td, recursive = TRUE)
-  rast_from_temp_asc(tmp)
-}
-
-dwd_build_url <- function(folder, prefix, layout, year, month) {
-  fn <- sprintf("grids_germany_monthly_%s_%s", prefix, ym(year, month))
-  if (layout == "nested") {
-    join_url(base_url, folder, month_subdir(month), paste0(fn, ".asc.gz"))
-  } else if (layout == "flat_asc") {
-    join_url(base_url, folder, paste0(fn, ".asc.gz"))
-  } else if (layout == "flat_zip") {
-    join_url(base_url, folder, paste0(fn, ".zip"))
-  } else {
-    stop("Unknown layout: ", layout)
-  }
-}
-
-download_if_needed <- function(url, dest, skip_if_exists) {
-  dir.create(dirname(dest), recursive = TRUE, showWarnings = FALSE)
-  if (isTRUE(skip_if_exists) && file.exists(dest) && file.info(dest)$size > 0L) {
-    return(TRUE)
-  }
-  st <- try(download.file(url, dest, mode = "wb", quiet = TRUE), silent = TRUE)
-  if (inherits(st, "try-error") || !isTRUE(st == 0L)) {
-    if(file.exists(dest)) unlink(dest)
-    return(FALSE)
-  }
-  TRUE
-}
-
-load_month_raster <- function(local_path, layout) {
-  r <- if (layout %in% c("nested", "flat_asc")) {
-    rast_from_gz_ascii(local_path)
-  } else if (layout == "flat_zip") {
-    rast_from_zip_ascii(local_path)
-  } else {
-    stop("Unknown layout: ", layout)
-  }
-  ensure_dwd_crs(r)
-}
-
-raw_dest_path <- function(folder, year, month, layout) {
-  yms <- ym(year, month)
-  ext <- if (layout == "flat_zip") ".zip" else ".asc.gz"
-  file.path(out_dir_raw, folder, paste0(yms, ext))
-}
-
-align_to_template <- function(r, template) {
-  project(r, template)
-}
-
-crop_mask_hessen <- function(r, hessen_sf) {
-  hv <- vect(st_transform(hessen_sf, crs(r)))
-  mask(crop(r, hv), hv)
-}
-
-mid_month_doy <- function(month) {
-  as.integer(format(as.Date(sprintf("2001-%02d-15", month)), "%j"))
-}
-
-latitude_raster <- function(template) {
-  n <- ncell(template)
-  xy <- xyFromCell(template, seq_len(n))
-  pts <- st_as_sf(
-    data.frame(x = xy[, 1], y = xy[, 2]),
-    coords = c("x", "y"),
-    crs = crs(template)
-  )
-  pts <- st_transform(pts, "EPSG:4326")
-  lat <- st_coordinates(pts)[, 2]
-  setValues(template, lat)
-}
-
-photoperiod_stack <- function(lat_template, template, name_year) {
-  months <- 1:12
-  doys <- vapply(months, mid_month_doy, integer(1))
-  latv <- values(lat_template)
-  layers <- vector("list", 12L)
-  for (i in seq_along(months)) {
-    dl <- geosphere::daylength(latv, doys[i])
-    layers[[i]] <- setValues(template, dl)
-  }
-  r <- rast(layers)
-  names(r) <- sprintf("photoperiod_hours_%04d-%02d", name_year, months)
-  r
-}
-
-photoperiod_delta <- function(ph_stack, circular_wrap = FALSE, name_year) {
-  out <- ph_stack * NA
-  for (i in 2:12) {
-    out[[i]] <- ph_stack[[i]] - ph_stack[[i - 1]]
-  }
-  if (isTRUE(circular_wrap)) {
-    out[[1]] <- ph_stack[[1]] - ph_stack[[12]]
-  }
-  names(out) <- sprintf("photoperiod_delta_hours_%04d-%02d", name_year, 1:12)
-  out
-}
-
-process_product_year <- function(folder, prefix, layout, year, hessen_sf, template, skip_dl) {
-  layers <- list()
-  avail_months <- c()
-  for (month in 1:12) {
-    url <- dwd_build_url(folder, prefix, layout, year, month)
-    dest <- raw_dest_path(folder, year, month, layout)
-    
-    success <- download_if_needed(url, dest, skip_if_exists = skip_dl)
-    
-    if (success) {
-      r <- try(load_month_raster(dest, layout), silent = TRUE)
-      if (!inherits(r, "try-error")) {
-        r <- crop_mask_hessen(r, hessen_sf)
-        r <- align_to_template(r, template)
-        layers[[length(layers) + 1]] <- r
-        avail_months <- c(avail_months, month)
-      }
-    }
-  }
-  
-  if (length(layers) == 0) return(NULL)
-  
-  stk <- rast(layers)
-  names(stk) <- sprintf("%s_%04d-%02d", folder, year, avail_months)
-  stk
-}
-
-# ---- main -------------------------------------------------------------------
-
+# Directories
+out_dir_raw    <- file.path(project_root, "data/hyras_raw")
+out_dir_hessen <- file.path(project_root, "data/hyras_hessen")
 dir.create(out_dir_raw, recursive = TRUE, showWarnings = FALSE)
 dir.create(out_dir_hessen, recursive = TRUE, showWarnings = FALSE)
 
-message("Loading Hessen boundary (GADM)...")
-hessen_sf <- load_hessen_sf()
+# Product list (Only 2026 v6-1 files)
+hyras_tasks <- list(
+  precipitation = "https://opendata.dwd.de/climate_environment/CDC/grids_germany/daily/hyras_de/precipitation/pr_hyras_1_2026_v6-1_de.nc",
+  air_temp_mean = "https://opendata.dwd.de/climate_environment/CDC/grids_germany/daily/hyras_de/air_temperature_mean/tas_hyras_1_2026_v6-1_de.nc",
+  air_temp_max  = "https://opendata.dwd.de/climate_environment/CDC/grids_germany/daily/hyras_de/air_temperature_max/tasmax_hyras_1_2026_v6-1_de.nc"
+)
 
-if (!reference_product %in% dwd_products$folder) {
-  stop("reference_product must be one of dwd_products$folder")
-}
-pref <- dwd_products[dwd_products$folder == reference_product, , drop = FALSE]
+# ---- Load Hessen -------------------------------------------------------------
+message("Preparing Hessen boundary...")
+hessen <- gadm(country = "DEU", level = 1, path = tempdir(), version = "latest")
+hessen <- st_as_sf(hessen[grepl("hess", hessen$NAME_1, ignore.case = TRUE), ])
 
-message("Building template from ", reference_product, " (", years[1], "-01)...")
-ref_url <- dwd_build_url(pref$folder[1], pref$prefix[1], pref$layout[1], years[1], 1L)
-ref_dest <- raw_dest_path(pref$folder[1], years[1], 1L, pref$layout[1])
+# ---- Processing Loop ---------------------------------------------------------
+template_r <- NULL 
 
-# Modified template creation to ensure we have a fallback if Jan 2026 isn't out yet
-template_success <- download_if_needed(ref_url, ref_dest, skip_if_exists = skip_existing_downloads)
-if(!template_success) stop("Template month (January of first year) not available. Year might not have started yet.")
-
-ref_r <- load_month_raster(ref_dest, pref$layout[1])
-template <- crop_mask_hessen(ref_r, hessen_sf)
-
-lat_r <- latitude_raster(template)
-ph <- photoperiod_stack(lat_r, template, years[1])
-ph_d <- photoperiod_delta(ph, circular_wrap = FALSE, years[1])
-
-photo_dir <- file.path(out_dir_hessen, "photoperiod")
-dir.create(photo_dir, showWarnings = FALSE, recursive = TRUE)
-ph_path <- file.path(photo_dir, "photoperiod_hours.tif")
-phd_path <- file.path(photo_dir, "photoperiod_delta_hours.tif")
-
-if (!file.exists(ph_path) || isTRUE(overwrite_outputs)) {
-  writeRaster(ph, ph_path, overwrite = TRUE, gdal = c("COMPRESS=DEFLATE", "TILED=YES"))
-  message("Wrote ", ph_path)
-} else {
-  message("Skip (exists): ", ph_path)
-}
-if (!file.exists(phd_path) || isTRUE(overwrite_outputs)) {
-  writeRaster(ph_d, phd_path, overwrite = TRUE, gdal = c("COMPRESS=DEFLATE", "TILED=YES"))
-  message("Wrote ", phd_path)
-} else {
-  message("Skip (exists): ", phd_path)
-}
-
-for (year in years) {
-  ydir <- file.path(out_dir_hessen, as.character(year))
-  dir.create(ydir, showWarnings = FALSE, recursive = TRUE)
+for (prod_name in names(hyras_tasks)) {
+  url <- hyras_tasks[[prod_name]]
+  dest_file <- file.path(out_dir_raw, basename(url))
   
-  for (k in seq_len(nrow(dwd_products))) {
-    folder <- dwd_products$folder[k]
-    prefix <- dwd_products$prefix[k]
-    layout <- dwd_products$layout[k]
-    
-    out_tif <- file.path(ydir, paste0(folder, ".tif"))
-    if (file.exists(out_tif) && !isTRUE(overwrite_outputs)) {
-      message("Skip (exists): ", out_tif)
-      next
-    }
-    
-    message("Processing ", folder, " ", year, " ...")
-    stk <- process_product_year(folder, prefix, layout, year, hessen_sf, template, skip_existing_downloads)
-    
-    if (is.null(stk)) {
-      message("No data available for ", folder, " in year ", year)
-      next
-    }
-    
-    writeRaster(stk, out_tif, overwrite = TRUE, gdal = c("COMPRESS=DEFLATE", "TILED=YES"))
-    message("Wrote ", out_tif)
+  # 1. Download
+  if (!file.exists(dest_file)) {
+    message("Downloading ", prod_name, "...")
+    download.file(url, dest_file, mode = "wb", quiet = TRUE)
   }
+  
+  # 2. Load Raster
+  r <- rast(dest_file)
+  
+  # 3. Time Filtering (Matching exact 2026 dates)
+  time_vals <- time(r)
+  indices   <- which(as.Date(time_vals) >= start_date & as.Date(time_vals) <= end_date)
+  
+  if (length(indices) == 0) {
+    message("! Warning: No matching dates found in the file for ", prod_name)
+    next
+  }
+  
+  r_subset <- r[[indices]]
+  
+  # 4. Crop & Mask
+  # Project Hessen vector to match the HYRAS NetCDF projection
+  hessen_vect <- vect(st_transform(hessen, crs(r_subset)))
+  r_hess <- mask(crop(r_subset, hessen_vect), hessen_vect)
+  
+  # 5. Metadata Cleanup
+  # Ensure layer names reflect the variable and date
+  names(r_hess) <- paste0(prod_name, "_", format(as.Date(time_vals[indices]), "%Y%m%d"))
+  
+  # 6. Save
+  out_path <- file.path(out_dir_hessen, paste0("hessen_", prod_name, ".tif"))
+  writeRaster(r_hess, out_path, overwrite = TRUE, gdal = c("COMPRESS=DEFLATE"))
+  message("Successfully saved: ", out_path)
+  
+  # Keep first result as spatial template for photoperiod
+  if (is.null(template_r)) template_r <- r_hess[[1]]
 }
 
-message("Done. Cropped stacks: ", out_dir_hessen, "; photoperiod: ", photo_dir)
+# ---- Photoperiod Predictor ---------------------------------------------------
+if (!is.null(template_r)) {
+  message("Generating daily photoperiod predictors for Hessen...")
+  date_seq <- seq.Date(start_date, end_date, by = "day")
+  
+  # Calculate latitudinal daylength for each pixel
+  xy <- xyFromCell(template_r, seq_len(ncell(template_r)))
+  pts_lat <- st_coordinates(st_transform(st_as_sf(as.data.frame(xy), coords = c("x", "y"), crs = crs(template_r)), "EPSG:4326"))[, 2]
+  
+  ph_list <- lapply(date_seq, function(d) {
+    doy <- as.integer(format(d, "%j"))
+    setValues(template_r, geosphere::daylength(pts_lat, doy))
+  })
+  
+  ph_stk <- rast(ph_list)
+  names(ph_stk) <- paste0("photoperiod_", format(date_seq, "%Y%m%d"))
+  writeRaster(ph_stk, file.path(out_dir_hessen, "hessen_photoperiod.tif"), overwrite = TRUE)
+}
+
+message("Full process complete. Daily 2026 data prepared for Hessen.")
+
 ```
 
 [![](/assets/images/teaserimages/unit05/precipitation.png)](https://doi.org/10.1007/978-3-030-97540-1_7)
