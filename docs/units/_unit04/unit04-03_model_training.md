@@ -139,6 +139,9 @@ Visualizing the daily changes in occupancy probability allows us to identify phe
 
 ```r 
 
+library(terra)
+library(ggplot2)
+library(tidyterra)
 
 ggplot() +
   geom_spatraster(data = prediction_stack) +
