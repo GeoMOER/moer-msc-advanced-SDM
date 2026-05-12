@@ -15,49 +15,54 @@ We begin by loading our presence/background data and environmental predictors. T
 Traditional random cross-validation often overestimates model performance because spatial data is inherently autocorrelated. `knndm` ensures that the distance between training and test points in the CV folds matches the distance between training data and the actual prediction domain.
 
 ```r
+
 library(CAST)
 library(sf)
 library(dplyr)
-library(terra)
 
-# 1.1 Load Training Data ----
-data <- sf::read_sf("data/trainingData.gpkg")
-po <- data %>% dplyr::filter(presence == 1)
-bg <- data %>% dplyr::filter(presence == 0)
 
-# Load Predictor Rasters
-r_files <- list.files("data/hyras_hessen/", pattern = "*.tif$", 
-                      full.names = TRUE, recursive = TRUE)
-predictors_stack <- terra::rast(r_files)
+# 1 - load data ####
+#------------------#
 
-# 1.2 Spatial Cross-Validation Setup ----
-# Generate clusters for presence points based on the model domain
-knndm_folds <- CAST::knndm(tpoints = po, modeldomain = predictors_stack, k = 6)
-po$KNNDM <- knndm_folds$clusters
+data=sf::read_sf("data/trainingData.gpkg")
+po=data%>%dplyr::filter(presence==1)
+bg=data%>%dplyr::filter(presence==0)
 
-# Assign background points to folds randomly (matching the k count)
+r=list.files("data/hyras_hessen/", pattern = "*.tif$", full.names = TRUE,
+             recursive = TRUE)
+r=terra::rast(r)
+
+# 2 - create space time folds for cross-validation and testing ####
+#-----------------------------------------------------------------#
+
+KNNDMpo = CAST::knndm(tpoints = po, modeldomain = r,k=6)
+po$KNNDM <- KNNDMpo$clusters
 bg$KNNDM <- sample(1:6, nrow(bg), replace = TRUE)
 
-# Combine and clean
-train_df <- rbind(po, bg) %>% 
-  na.omit() %>%
-  st_drop_geometry() # Remove geometry for the training function
+data=rbind(po,bg);rm(po,bg,KNNDMpo)
+data=na.omit(data)
 
-# 1.3 Random Forest Training ----
-source("[https://raw.githubusercontent.com/envima/sdmEvaluationMetrics/refs/heads/main/R/functions/rfModelTraining.R](https://raw.githubusercontent.com/envima/sdmEvaluationMetrics/refs/heads/main/R/functions/rfModelTraining.R)")
+# 4 -  ####
+#------------------------
 
-if(!dir.exists("data/output")) dir.create("data/output", recursive = TRUE)
+source("https://raw.githubusercontent.com/envima/sdmEvaluationMetrics/refs/heads/main/R/functions/rfModelTraining.R")
 
-rf_model <- rfModelTraining(
-  trainingData = train_df,
-  response     = "presence",
-  spacevar     = "KNNDM",
-  timevar      = "time",
-  k            = 5,
-  predictors   = c("air_temp_max", "air_temp_mean", "photoperiod", "precipitation"),
-  outputPathModel = "data/output/phoenicurus_phoenicurus_rf.RDS",
-  prediction   = FALSE
-)
+if(!dir.exists("data/output")) dir.create("data/output")
+data$geom <- NULL
+
+
+rf <- rfModelTraining(trainingData = data,
+                      response = "presence",
+                      spacevar = "KNNDM",
+                      timevar = "time",
+                     # variables = r,
+                      k=5,
+                      predictors= c("air_temp_max", "air_temp_mean", "photoperiod", "precipitation"),
+                      outputPathModel = "data/output/phoenicurus_phoenicurus_rf.RDS",
+                      prediction = FALSE)
+
+
+
 ```
 
 
@@ -67,38 +72,65 @@ Once the model is trained, we apply it to our raster stack. Since our predictors
 
 
 ```r
+library(terra)
+library(dplyr)
 library(tidyterra)
 library(ggplot2)
 
-# 2.1 Setup Prediction Loop ----
-rf_model <- readRDS("data/output/phoenicurus_phoenicurus_rf.RDS")
-layer_names <- names(predictors_stack)
+# 1 - load data ####
+#------------------#
+
+RF = readRDS("data/output/phoenicurus_phoenicurus_rf.RDS")
+r=list.files("data/hyras_hessen/", pattern = "*.tif$", full.names = TRUE,
+             recursive = TRUE)
+r=terra::rast(r)
+
+
+# 1. Prepare Date metadata
+# We extract the unique dates from your raster layer names
+layer_names <- names(r)
+# This regex extracts the 8-digit date string (e.g., 20260322)
 dates <- unique(gsub(".*_", "", layer_names))
 
+# 2. Iterate through each day and predict
 results_list <- list()
 
 for (d in dates) {
-  message("Predicting for date: ", d)
+  cat("Processing date:", d, "\n")
   
-  # Subset and rename layers to match training variable names
-  daily_sub <- predictors_stack[[grep(d, layer_names)]]
-  names(daily_sub) <- gsub(paste0("_", d), "", names(daily_sub))
+  # Identify layers for the current date
+  daily_layers <- grep(d, layer_names, value = TRUE)
+  r_sub <- r[[daily_layers]]
   
-  # Predict probability (selecting the 'presence' class, usually index 2)
-  pred_prob <- terra::predict(daily_sub, rf_model, type = "prob", na.rm = TRUE)[[2]]
+  # CRITICAL: Rename layers to match the training names
+  # Removes the "_YYYYMMDD" suffix so layers are named "air_temp_max", etc.
+  names(r_sub) <- gsub(paste0("_", d), "", names(r_sub))
   
-  # Rescale and save
-  pred_rescaled <- climateStability::rescale0to1(pred_prob)
-  names(pred_rescaled) <- paste0("date_", d)
+  # Ensure the model only sees the predictors it was trained on
+  # (air_temp_max, air_temp_mean, photoperiod, precipitation)
+  r_sub <- r_sub[[c("air_temp_max", "air_temp_mean", "photoperiod", "precipitation")]]
   
-  writeRaster(pred_rescaled, 
-              filename = paste0("data/output/rf_pred_", d, ".tif"), 
+  # 3. Predict
+  # Note: If your rf object is from the envima function, 
+  # it likely contains the caret/ranger model in rf$model or is the model itself.
+  # Assuming rf is the trained model object:
+  pred_day <- terra::predict(r_sub, RF, type = "prob", na.rm = TRUE)[[2]]
+  names(pred_day)<-d
+  # rescale raster between 0 and 1
+  pred=climateStability::rescale0to1(pred_day)
+  # Store or Save
+  # It is usually safer to save each day to disk to avoid filling up RAM
+  writeRaster(pred_day, 
+              filename = paste0("data/output/rf_", d, ".tif"), 
               overwrite = TRUE)
   
-  results_list[[d]] <- pred_rescaled
+  results_list[[d]] <- pred_day
 }
 
+# 4. (Optional) Create a Spatio-Temporal Raster Dataset
 prediction_stack <- terra::rast(results_list)
+terra::writeRaster(prediction_stack, "data/output/pred.tif")
+
 ```
 
 ### Visualizing Results
@@ -106,6 +138,8 @@ prediction_stack <- terra::rast(results_list)
 Visualizing the daily changes in occupancy probability allows us to identify phenological patterns or climate-driven shifts in the species' distribution.
 
 ```r 
+
+
 ggplot() +
   geom_spatraster(data = prediction_stack) +
   facet_wrap(~lyr) +
@@ -119,6 +153,8 @@ ggplot() +
     title = "Daily Calling Probability: Phoenicurus phoenicurus",
     caption = "Data: DWD, HLNUG"
   )
+
+
 ```
 
 ![](../assets/images/unit05/pred.png)
