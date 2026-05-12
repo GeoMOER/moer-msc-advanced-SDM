@@ -10,16 +10,6 @@ This unit explores the critical uncertainties inherent in evaluating Species Dis
 
 <!--more-->
 
-## Learning objectives
-
-At the end of this unit you should be able to:
-
-* Evaluate your models predictions map. 
-* Understand the influence of the threshold on threshold dependent metrics. 
-* Understand why standard metrics like AUC, Kappa, and TSS can deviate by approximately 40% from actual performance when calculated without true absence data.
-* 
-
-
 
 This unit explores the critical uncertainties inherent in evaluating Species Distribution Models (SDMs) built with presence-only data. You will learn how to navigate the statistical bias introduced when true absence data is missing and how to implement more robust evaluation strategies to ensure your models are reliable for research and nature conservation.
 
