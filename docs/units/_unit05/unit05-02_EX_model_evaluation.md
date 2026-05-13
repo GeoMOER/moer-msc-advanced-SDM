@@ -7,11 +7,11 @@ header:
 toc: true
 ---
 
-Most Species Distribution Model (SDM) outputs are continuous probabilities ranging from **0** to **1**. A common pitfall for researchers is failing to realize how drastically a distribution map changes based on the threshold chosen to define a presence-absence map.
+Most Species Distribution Model (SDM) outputs are continuous probabilities ranging from **0** to **1**. A common pitfall for researchers is failing to realize how drastically a distribution map changes based on the threshold chosen to define a presence-absence map when calculating threshold-dependent evaluation metrics.
 
 ### Task
 
-Take one of your continuous suitability map from the last unit and apply three different thresholds to create binary presence/absence maps:
+Take one of your continuous suitability map for Aglais caschmirensis from [Unit 03]({{ '/units/unit03/unit03-00_overview.html' | relative_url }}) and apply three different thresholds to create binary presence/absence maps:
 
 *   **Strict:** (e.g., **0.8** - captures only high-confidence areas).
 *   **Balanced:** (e.g., **0.5**).
