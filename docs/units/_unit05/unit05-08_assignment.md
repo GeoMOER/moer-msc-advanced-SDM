@@ -1,13 +1,13 @@
 ---
 title: "A | Assignment: 05"
-published: false
+published: true
 header:
   image: '/assets/images/teaserimages/Gemini_Generated_Image_cropped.png'
   caption: 'Generated with Google Gemini'
 toc: true
 ---
 
-Today, we learned that evaluation metrics calculated on presence-only data (like AUC or TSS) can deviate from actual model performance by ~40%. In this assignment, we will try to find out how much current literature relies on evaluation metrics and how details on their calculation are reported.
+Today, we learned that evaluation metrics calculated on presence-only data (like AUC or TSS) can deviate from actual model performance. In this assignment, we will try to find out how much current literature relies on evaluation metrics and how details on their calculation are reported.
 
 {% capture Assignment-1-1 %}
 ### Task 1: Find a Case Study

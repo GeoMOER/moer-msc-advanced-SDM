@@ -1,6 +1,6 @@
 ---
 title: "LM | Model evaluation "
-published: false
+published: true
 header:
   image: '/assets/images/teaserimages/Gemini_Generated_Image_cropped.png'
   caption: 'Generated with Google Gemini'
@@ -14,7 +14,7 @@ toc: true
 
 
 
-Model evaluation is the process of assessing how good or reliable a model as well as its predictions are. Alos we want to determine the model’s ability to generalize. A model that performs perfectly on its training data but fails to predict independent observations is [overfitted](https://en.wikipedia.org/wiki/Overfitting), meaning it has memorized the training data by heart but it is not able to make valuable assumptions about data that deviates from the training data. Ideally effective evaluation would allows us to communicate the quality of our models to stakeholders and researchers and ensure that conservation decisions are based on robust evidence. 
+Model evaluation is the process of assessing how good or reliable a model as well as its predictions are. Also we want to determine the model’s ability to generalize. A model that performs perfectly on its training data but fails to predict independent observations is [overfitted](https://en.wikipedia.org/wiki/Overfitting), meaning it has memorized the training data by heart but it is not able to make valuable assumptions about data that deviates from the training data. Ideally effective evaluation would allows us to communicate the quality of our models to stakeholders and researchers and ensure that conservation decisions are based on robust evidence. 
 
 
 [![https://en.wikipedia.org/wiki/Overfitting](https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Pyplot_overfitting.png/960px-Pyplot_overfitting.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20240704144658)](https://commons.wikimedia.org/wiki/File:Pyplot_overfitting.png)
@@ -34,7 +34,7 @@ In Species Distribution Modeling a lot of the metrics are standard machine learn
 
 ### Threshold-Dependent Metrics
 
-When your study design includes presence-absences (binary data [0,1]) you can utilize the standard machine learning Confusion Matrix approach. This matrix serves as the foundation for most classification statistics by categorizing outcomes into True Positives, True Negatives, False Positives, and False Negatives.
+When your study design includes presence-absences (binary data [0,1]) you can utilize the standard machine learning Confusion Matrix. This matrix serves as the foundation for most classification statistics by categorizing outcomes into True Positives, True Negatives, False Positives, and False Negatives.
 
 [![](../assets/images/unit04/cm.png)](https://en.wikipedia.org/wiki/Confusion_matrix)
 
@@ -50,12 +50,6 @@ Commonly used evaluation metrics include:
     *   *Calculation:* TP / (TP + FN)
 *   **Specificity (True Negative Rate):** Measures the ability to correctly identify unoccupied sites. A model with low specificity suffers from "Commission errors" (predicting the species where it is not).
     *   *Calculation:* TN / (TN + FP)
-*   **Precision (Positive Predictive Value):** Focuses on the reliability of a presence prediction.
-    *   *Calculation:* TP / (TP + FP)
-*   **Omission Rate:** Critical for conservation, this is the proportion of observed presences that were falsely predicted as absences. It is effectively the inverse of Sensitivity.
-    *   *Calculation:* FN / (TP + FN)
-*   **F1-Score:** This provides a harmonic mean between Precision and Sensitivity. It is particularly useful when you have an uneven number of presences and absences, as it ignores True Negatives and focuses on the model's success regarding the "Presence" class.
-    *   *Calculation:* 2 * ((Precision * Sensitivity) / (Precision + Sensitivity))
 *   **Cohen’s Kappa:** Measures the agreement between the model and the observations, corrected for the agreement that might occur by chance.
     *   *Calculation:* (Observed Accuracy - Expected Accuracy) / (1 - Expected Accuracy)
         *   *Where Observed Accuracy* = (TP + TN) / Total
@@ -66,7 +60,7 @@ For a comprehensive overview of the evaluation metrics, you may refer to the stu
 
 While many of these metrics originate from general ecological context, others have been specifically proposed for SDM. A primary example is the [**True Skill Statistic (TSS)**](https://doi.org/10.1111/j.1365-2664.2006.01214.x). The TSS was introduced as an advancement over Cohen’s Kappa to address the latter's problematic sensitivity to species prevalence. 
 
-In ecological studies, TSS is often preferred because it provides a measure of performance that is mathematically independent of the species' prevalence (the frequency of occurrence in the dataset). It is calculated as the sum of sensitivity and specificity minus one (Sensitivity + Specificity - 1). The resulting values range from -1 to +1. In modeling practice, TSS values above 0.6 are generally considered to indicate high model utility, while a value of 0 suggests the model performs no better than random. The theoretical foundation for the superiority of this metric over Kappa can be found in the work of [Allouche et al. (2006)](https://doi.org/10.1111/j.1365-2664.2006.01214.x).	
+In ecological studies, TSS is often preferred because it provides a measure of performance that is more independent of the species' prevalence (the frequency of occurrence in the dataset). It is calculated as the sum of sensitivity and specificity minus one (Sensitivity + Specificity - 1). The resulting values range from -1 to +1. In modeling practice, TSS values above 0.6 are generally considered to indicate high model utility, while a value of 0 suggests the model performs no better than random. The theoretical foundation for the superiority of this metric over Kappa can be found in the work of [Allouche et al. (2006)](https://doi.org/10.1111/j.1365-2664.2006.01214.x).	
 	
 	
 **Note:** Look at the classes in the confusion matrix, what do you notice about the data type. Also think about the data you have set aside for model testing and the maps that you have produced. What potential challenges do you anticipate?

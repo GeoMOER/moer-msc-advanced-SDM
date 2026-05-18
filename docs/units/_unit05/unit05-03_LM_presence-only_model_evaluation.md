@@ -1,6 +1,6 @@
 ---
-title: "LM | Presence-only SDM model evaluation 🚧"
-published: false
+title: "LM | Presence-only SDM model evaluation"
+published: true
 header:
   image: '/assets/images/teaserimages/Gemini_Generated_Image_cropped.png'
   caption: 'Generated with Google Gemini'
@@ -53,7 +53,9 @@ As you can observe, imbalance leads to a significantly higher error rate in the 
 
 ## Sampling methods
 
-Most studies rely on random backfground points to evaluate the models. These points are however just randomly distributed over the study area. 
+Most studies rely on random background points to evaluate the models. These points are however just randomly distributed over the study area. This means that depending on your niche width you are more likely to get higher or lower evaluation metrics. For example, if your niche is very small and your background points are distributed randomly over the study area, they are more likely to be sampled in areas where the species is absent, leading to inflated evaluation metrics. If the niche of your species is very broad you are more likely to sample in suitable areas creating a worse evaluation result. 
+
+An alternative to this approach is to sample background points via the environmental space by sampling points in areas that are environmentaly distant from the presence points. These points are either called pseudo-absences or artificial-absence data sometimes also invented-absence data. We can achieve somewhat lower errors in the evaluation metrics by distant environmental space for artificial-absences as you can see in the figure below. 
 
 
 <div align="center">
@@ -61,23 +63,4 @@ Most studies rely on random backfground points to evaluate the models. These poi
 </div>
 
 **Figure:** *Absolute errors of evaluation metrics. Comparison of absolute errors calculated on presence-background (PBG; purple), and presence-artificial-absence (PAA; green). Each box plot is based on 8,335 data points. Outliers in gray. Low absolute error indicates good assessment of the artificial distribution maps by the evaluation metric. Median absolute error is indicated in the boxplot. Bald et al. (under review)*
-
-
-
-## Exercise
-
-```r
-# Example logic for AOA sampling
-# 1. Calculate AOA
-aoa_result <- CAST::aoa(newdata = env_predictors, train = presence_data_coords)
-
-# 2. Identify areas outside the AOA (environmentally dissimilar)
-# Usually DI > threshold
-dist_areas <- aoa_result$DI > aoa_result$threshold
-
-# 3. Sample artificial absences from these areas
-paa_points <- terra::spatSample(dist_areas, size = nrow(presence_data), method = "random")
-
-```
-
 
