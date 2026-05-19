@@ -69,18 +69,16 @@ Tuesday 09:15 - 11:15.
 | 05 | 12.05.2026 |  Train a spatio-temporal model   | What are the challenges of data captured by ARUs? | 
 ||| **SDM evaluation metrics**                   |        | 
 | 06 | 19.05.2026 |   Model evaluation  | What do we know about calculation and accuracy of evaluation metrics? |  
-||| **Artificial landscapes**                   |        |
-|  07 | 26.05.2026 | Artificial landscapes | Create neutral landscape models |
 ||| **Virtual species**                   |        |
-| 08 | 02.06.2026 | Virtual species | Generate virtual species with different ecological niches|
+| 07 | 26.05.2026 | Virtual species | Generate virtual species with different ecological niches|
 ||| **From idea to insight: Your personal research project** ||
-| 09 | 09.06.2026 | Your research project         | Select your research question and start to work on your project outline. |
+| 08 | 02.06.2026 | Your research project         | Select your research question and start to work on your project outline. |
+|  09| 09.06.2026 |   **Project outline presentation**   | Present project outlines to peers for constructive feedback.   |
 | 10 | ~~16.06.2026~~  | Canceled |   |
-|  11| 23.06.2026 |   **Project outline presentation**   | Present project outlines to peers for constructive feedback.   |
+| 11 | 23.06.2026  | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
 | 12 | 30.06.2026  | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
 | 13 | 07.07.2026 | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
 ||| **Synthesis**                                ||
-
 | 14 | 14.07.2026 | Wrap up                      | Get and give feedback from your peers and instructors, tell us how you self-assess your skills, and happy holidays |
 
 

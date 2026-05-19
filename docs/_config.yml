@@ -193,7 +193,7 @@ defaults:
       path: ""
       type: unit06
     values:
-      category: "06 Artificial landscapes"
+      category: "06 Virtual species"
       tags: "Unit 06"
       layout: single
       sidebar:
@@ -203,21 +203,11 @@ defaults:
       path: ""
       type: unit07
     values:
-      category: "07 Virtual species"
+      category: "07 Your research project"
       tags: "Unit 07"
       layout: single
       sidebar:
         nav: "course_unit"         
-  # unit08
-  - scope:
-      path: ""
-      type: unit08
-    values:
-      category: "08 Your research project"
-      tags: "Unit 08"
-      layout: single
-      sidebar:
-        nav: "course_unit" 
   # unit04
  # - scope:
  #     path: ""

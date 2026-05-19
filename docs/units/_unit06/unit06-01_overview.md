@@ -5,12 +5,16 @@ header:
   image: '/assets/images/teaserimages/landscape.png'
   caption: '紅色死神 via [flickr.com](https://flic.kr/p/2p6ah3Q). [CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/). Image cropped.'
 ---
-In this unit, you will generate artificial landscapes as environmental variables for SDM. You will learn how to construct **neutral landscape models (NLMs)** and explore designing of realistic environmental patterns. These artificial datasets will be used in the next unit to create virtual species.
+
+In this unit, we will focus on **virtual species** as a tool for testing species distribution models. You will learn how to generate virtual species by defining their ecological preferences, and simulating their distributions. The virtual species will allow you to create controlled experiments to evaluate SDMs in your research project.
+
 <!--more-->
 
 ## Learning Objectives
 By the end of this unit, you should be able to:
 
-- understand the importance of selecting fitting variables in species distribution modeling,
-- create **neutral landscape models (NLMs)** in R,
-- and explore multicorrelinearity between environmental variables.
+- understand the purpose of virtual species in species distribution modeling,
+- create virtual species in R,
+- be able to define species response curves,
+- and sample occurrence points under different scenarios.
+

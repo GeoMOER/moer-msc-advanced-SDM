@@ -1,19 +1,17 @@
 ---
 title: "Overview"
 toc: true
+published: false
 header:
-  image: '/assets/images/teaserimages/ai.png'
-  caption: '[Marco Verch via ccnull.de](https://ccnull.de/foto/kuenstliche-intelligenz-bei-der-arbeit/1095606). [CC-BY 2.0](https://creativecommons.org/licenses/by/2.0/de/). Image cropped.'
+  image: '/assets/images/teaserimages/landscape.png'
+  caption: '紅色死神 via [flickr.com](https://flic.kr/p/2p6ah3Q). [CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/). Image cropped.'
 ---
-
-This unit is all about your final team project. Think about your research question and create a project outline as basis for your project. To finish this course it is mandatory to submit the final team project.
-
+In this unit, you will generate artificial landscapes as environmental variables for SDM. You will learn how to construct **neutral landscape models (NLMs)** and explore designing of realistic environmental patterns. These artificial datasets will be used in the next unit to create virtual species.
 <!--more-->
-You have almost made it! This is the last unit of the course in which you will apply what you have learned in the past units. Now you will be challenged to create your own team project from scratch that uses virtual species.
 
-## Learning objectives
-At the end of this unit you should be able to
+## Learning Objectives
+By the end of this unit, you should be able to:
 
-* develop a research question,
-* plan and realize a research project from scratch, and
-* present your project in an appropriate format.
+- understand the importance of selecting fitting variables in species distribution modeling,
+- create **neutral landscape models (NLMs)** in R,
+- and explore multicorrelinearity between environmental variables.

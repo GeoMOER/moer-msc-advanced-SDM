@@ -2,19 +2,18 @@
 title: "Overview"
 toc: true
 header:
-  image: '/assets/images/teaserimages/landscape.png'
-  caption: '紅色死神 via [flickr.com](https://flic.kr/p/2p6ah3Q). [CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/). Image cropped.'
+  image: '/assets/images/teaserimages/ai.png'
+  caption: '[Marco Verch via ccnull.de](https://ccnull.de/foto/kuenstliche-intelligenz-bei-der-arbeit/1095606). [CC-BY 2.0](https://creativecommons.org/licenses/by/2.0/de/). Image cropped.'
 ---
 
-In this unit, we will focus on **virtual species** as a tool for testing species distribution models. You will learn how to generate virtual species by defining their ecological preferences, and simulating their distributions. The virtual species will allow you to create controlled experiments to evaluate SDMs in your research project.
+This unit is all about your final team project. Think about your research question and create a project outline as basis for your project. To finish this course it is mandatory to submit the final team project.
 
 <!--more-->
+You have almost made it! This is the last unit of the course in which you will apply what you have learned in the past units. Now you will be challenged to create your own team project from scratch that uses virtual species.
 
-## Learning Objectives
-By the end of this unit, you should be able to:
+## Learning objectives
+At the end of this unit you should be able to
 
-- understand the purpose of virtual species in species distribution modeling,
-- create virtual species in R,
-- be able to define species response curves,
-- and sample occurrence points under different scenarios.
-
+* develop a research question,
+* plan and realize a research project from scratch, and
+* present your project in an appropriate format.
