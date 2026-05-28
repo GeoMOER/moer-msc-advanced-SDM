@@ -73,9 +73,9 @@ Tuesday 09:15 - 11:15.
 | 07 | 26.05.2026 | Virtual species | Generate virtual species with different ecological niches|
 ||| **From idea to insight: Your personal research project** ||
 | 08 | 02.06.2026 | Your research project         | Select your research question and start to work on your project outline. |
-|  09| 09.06.2026 |   **Project outline presentation**   | Present project outlines to peers for constructive feedback.   |
+|  09| 09.06.2026 |   Free working session  | No input in this session. Work on your project outline.   |
 | 10 | ~~16.06.2026~~  | Canceled |   |
-| 11 | 23.06.2026  | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
+| 11 | 23.06.2026  | **Project outline presentation**  | Present project outlines to peers for constructive feedback.  |
 | 12 | 30.06.2026  | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
 | 13 | 07.07.2026 | Free working session | No input in this session. Its just you and your project. Work on it and use the time to ask questions. |
 ||| **Synthesis**                                ||

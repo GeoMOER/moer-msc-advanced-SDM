@@ -14,8 +14,8 @@ Write your project outline. Therefore
 1. find your group members and get to know each other,
 1. choose a research question,
 1. strictly follow the points mentioned under "Content and structure",
-1. upload your project outline to ILIAS until 23 June 2025 23:59 as one pdf file, and 
-1. present your outline during the session on 26 June 2025. Your presentation should not be longer than 10 minutes.
+1. upload your project outline to ILIAS until 17 June 2026 23:59 as one pdf file, and 
+1. present your outline during the session on 23 June 2026. Your presentation **should not be longer than 10 minutes (!)**.
 
 Again put your outline in a PDF document for upload on ILIAS.
 
@@ -34,6 +34,7 @@ Learn more about the requirements for creating a project outline and for the str
 The project outline should include
 * a title, of course, 
 * the authors,
+* a research question,
 * an introduction outlining the state of the art, research need and relevance of the expected results in the context of your research question,
 * a data section describing the intended data you are planning to use,
 * a method section with details on the methods you plan to apply on your data for getting an answer to you research question,
@@ -43,11 +44,11 @@ The project outline should include
 
 Note that the project outline should not exceed two pages.
 These pages will help the instructors to give feedback on especially the feasibility of your project. 
-
+{: .notice--info}
 
 
 # Feedback
-Feedback on the outline will be given in the next session. 
+Feedback on the outline will be given. 
 On the one hand, it is necessary to submit the outline in time, so that there is enough time for the instructors to prepare feedback. 
 On the other hand, the feedback will be given in the session. 
 In order to make the feedback understandable for everyone, your group should briefly present your outline within 10 minutes. 
