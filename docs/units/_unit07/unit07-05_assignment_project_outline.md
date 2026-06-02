@@ -37,7 +37,7 @@ The project outline should include
 * a research question,
 * an introduction outlining the state of the art, research need and relevance of the expected results in the context of your research question,
 * a data section describing the intended data you are planning to use,
-* a method section with details on the methods you plan to apply on your data for getting an answer to you research question,
+* a method section with details on the methods you plan to apply on your data for getting an answer to you research question as well as a flowchart figure,
 * a discussion section, where you discuss the implications, conclusions, potential limitations and improvements, picking up the story you created in the introduction, 
 * a timetable with important work packages and milestones you aim to work on for reaching the project goal, and 
 * references on relevant scientific papers, which have been published in the context of your research question.
